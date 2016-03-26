@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 no-padding-left-right">
     <aside class="sidebar-left">
         <h3 class="mb20">Danh muc san pham</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">

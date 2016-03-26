@@ -32,7 +32,7 @@
                     <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
                         @foreach($menuMain as $mm)
                             @if($mm->id == 4)
-                            <li><a href="#">{{$mm->title}}</a>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a>
                                 <ul>
                                 @foreach($menuList as $menu1)
                                 <li><a href="#">{{$menu1['name']}}</a>
@@ -64,7 +64,7 @@
                                 </ul>
                             </li>
                             @else
-                            <li><a href="#">{{$mm->title}}</a></li>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a></li>
                             @endif
                         @endforeach
                     </ul>
@@ -178,8 +178,11 @@
         </div>
     </div>
 </header>
+<input type="text" id="menuActive" value="{{$menuActive}}" style="display:none">
 <script>
     $(document).ready(function(){
+        $($("#menuActive").val()).addClass('active');
+
         $("li").on("click", function(){
             $("li").removeClass("active");
             $(this).addClass("active");

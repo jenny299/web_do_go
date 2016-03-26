@@ -48,6 +48,12 @@ Route::post('search',array('as' => 'search' , 'uses' =>'HomeController@post_sear
 
 //TUYET CODE
 Route::get('lang/{v}',array('as' => 'lang' , 'uses' =>'HomeController@lang'));
+Route::get('trang-chu',array('as' => 'trang-chu' , 'uses' =>'HomeController@home'));
+Route::get('gioi-thieu',array('as' => 'gioi-thieu' , 'uses' =>'HomeController@about'));
+Route::get('dich-vu',array('as' => 'dich-vu' , 'uses' =>'HomeController@services'));
+Route::get('khuyen-mai',array('as' => 'khuyen-mai' , 'uses' =>'HomeController@sale'));
+Route::get('san-pham',array('as' => 'san-pham' , 'uses' =>'HomeController@products'));
+Route::get('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@contact'));
 
 //admincontroller
 Route::group(array('prefix' =>'admin','before' =>'authAdmin'),function()

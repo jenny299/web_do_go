@@ -7,7 +7,7 @@
 
 <div class="col-md-6">
     <!-- <h1 class="mb20">Weekly Featured <small><a href="#">View All</a></small></h1> -->
-    <div class="row row-wrap" STYLE="margin-top: 45px">
+    <div class="row row-wrap" style="margin-top: 45px">
         <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="450" height="308">
         <param name="movie" value="{{Asset('upload/image/slider_img.swf')}}" />
         <param name="quality" value="high" />

@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 no-padding-left-right">
     <aside class="sidebar-right hidden-phone">
         <h3 class="mb20">Bai post moi</h3>
 

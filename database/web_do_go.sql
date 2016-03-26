@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-03-26 01:56:36
+Date: 2016-03-26 11:29:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `about` (
 -- ----------------------------
 -- Records of about
 -- ----------------------------
-INSERT INTO `about` VALUES ('1', 'dsfdsg dsfgt we ery ytryer&nbsp;<br />\r\nsdtg<br />\r\nsdtert', 'huhuhu<br />\r\n<strong><u><em>hahaha</em></u></strong>', '2016-03-12 09:46:01', '2016-03-12 02:46:01');
+INSERT INTO `about` VALUES ('1', '<p style=\"line-height: 20.8px; text-align: center;\"><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 0, 0);\">CTY CP KI&Ecirc;N LINH VIỆT NAM</span></span></p>\r\n\r\n<p style=\"line-height: 20.8px;\">Từ xưa con người đ&atilde; biết sử dụng gỗ để l&agrave;m c&aacute;c sản phẩm trang tr&iacute; nội, ngoại thất do vậy m&agrave; gỗ đ&atilde; trở n&ecirc;n th&ocirc;ng dụng v&agrave; th&acirc;n thiết với con người. Gỗ được nhiều người lựa chọn kh&ocirc;ng chỉ bởi t&iacute;nh bền, đẹp, dễ sử dụng m&agrave; c&ograve;n v&igrave; chất lượng v&agrave; gi&aacute; cả rất ph&ugrave; hợp.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nHiểu được những ưu thế, những tiện &iacute;ch m&agrave; gỗ mang lại cho con người, bằng tất cả sự tận t&acirc;m v&agrave; khả năng chuy&ecirc;n nghiệp của m&igrave;nh CTY CP KI&Ecirc;N LINH VIỆT NAM đ&atilde; được th&agrave;nh lập v&agrave; ph&aacute;t triển trong phương hướng hoạt động ch&uacute;ng t&ocirc;i kh&ocirc;ng ngừng học hỏi kinh nghiệm, nắm bắt nhu cầu của thị trường để mang đến những sản phẩm tốt nhất cho người ti&ecirc;u d&ugrave;ng.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nKhi lựa chọn đến Ki&ecirc;n Linh xin qu&yacute; kh&aacute;ch h&agrave;ng y&ecirc;n t&acirc;m v&igrave; ch&uacute;ng t&ocirc;i lu&ocirc;n cung cấp những sản phẩm đảm bảo chất lượng v&agrave; uy t&iacute;n với kh&aacute;ch h&agrave;ng; với sự đa dạng về mẫu m&atilde;, chủng loại, kiểu d&aacute;ng phong ph&uacute; được sản xuất, thiết kế từ nguy&ecirc;n vật liệu cao cấp, ngoại nhập đặc biệt c&aacute;c sản phẩm của Ki&ecirc;n Linh sẽ lu&ocirc;n đảm bảo ph&ugrave; hợp cho mọi loại h&igrave;nh kiến tr&uacute;c từ cổ điển đến hiện đại.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nTrong những năm qua c&aacute;c sản phẩm do Ki&ecirc;n Linh cung cấp đ&atilde; được thi c&ocirc;ng, lắp đặt trong nhiều c&ocirc;ng tr&igrave;nh trang tr&iacute; nội thất cho c&aacute;c chung cư, cao ốc văn ph&ograve;ng, kh&aacute;ch sạn, showroom, biệt thự&hellip; với chất lượng kỹ thuật v&agrave; tr&igrave;nh độ thẩm mỹ cao mang t&iacute;nh chuy&ecirc;n nghiệp, hiện đại v&agrave; hiện tại những c&ocirc;ng tr&igrave;nh đ&oacute; đ&atilde; v&agrave; đang mang lại rất nhiều tiện &iacute;ch cho con người. Từ những th&agrave;nh c&ocirc;ng đ&oacute; Ki&ecirc;n Linh nhận thấy rằng phải lu&ocirc;n đổi mới phương thức phục vụ, nắm bắt xu hướng ph&aacute;t triển của x&atilde; hội để đề ra những ch&iacute;nh s&aacute;ch ph&aacute;t triển ti&ecirc;n phong, vượt trội tất cả nhằm mục ti&ecirc;u cuối c&ugrave;ng l&agrave; để phục vụ qu&yacute; kh&aacute;ch h&agrave;ng ng&agrave;y một tốt hơn.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nH&atilde;y để Ki&ecirc;n Linh mang tới vẻ đẹp sang trọng, lịch sự v&agrave; thật sự tiện nghi cho ng&ocirc;i nh&agrave; của qu&yacute; kh&aacute;ch.</p>\r\n', '<p style=\"line-height: 20.8px; text-align: center;\"><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 0, 0);\">CTY CP KI&Ecirc;N LINH VIỆT NAM</span></span></p>\r\n\r\n<p style=\"line-height: 20.8px;\">Từ xưa con người đ&atilde; biết sử dụng gỗ để l&agrave;m c&aacute;c sản phẩm trang tr&iacute; nội, ngoại thất do vậy m&agrave; gỗ đ&atilde; trở n&ecirc;n th&ocirc;ng dụng v&agrave; th&acirc;n thiết với con người. Gỗ được nhiều người lựa chọn kh&ocirc;ng chỉ bởi t&iacute;nh bền, đẹp, dễ sử dụng m&agrave; c&ograve;n v&igrave; chất lượng v&agrave; gi&aacute; cả rất ph&ugrave; hợp.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nHiểu được những ưu thế, những tiện &iacute;ch m&agrave; gỗ mang lại cho con người, bằng tất cả sự tận t&acirc;m v&agrave; khả năng chuy&ecirc;n nghiệp của m&igrave;nh CTY CP KI&Ecirc;N LINH VIỆT NAM đ&atilde; được th&agrave;nh lập v&agrave; ph&aacute;t triển trong phương hướng hoạt động ch&uacute;ng t&ocirc;i kh&ocirc;ng ngừng học hỏi kinh nghiệm, nắm bắt nhu cầu của thị trường để mang đến những sản phẩm tốt nhất cho người ti&ecirc;u d&ugrave;ng.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nKhi lựa chọn đến Ki&ecirc;n Linh xin qu&yacute; kh&aacute;ch h&agrave;ng y&ecirc;n t&acirc;m v&igrave; ch&uacute;ng t&ocirc;i lu&ocirc;n cung cấp những sản phẩm đảm bảo chất lượng v&agrave; uy t&iacute;n với kh&aacute;ch h&agrave;ng; với sự đa dạng về mẫu m&atilde;, chủng loại, kiểu d&aacute;ng phong ph&uacute; được sản xuất, thiết kế từ nguy&ecirc;n vật liệu cao cấp, ngoại nhập đặc biệt c&aacute;c sản phẩm của Ki&ecirc;n Linh sẽ lu&ocirc;n đảm bảo ph&ugrave; hợp cho mọi loại h&igrave;nh kiến tr&uacute;c từ cổ điển đến hiện đại.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nTrong những năm qua c&aacute;c sản phẩm do Ki&ecirc;n Linh cung cấp đ&atilde; được thi c&ocirc;ng, lắp đặt trong nhiều c&ocirc;ng tr&igrave;nh trang tr&iacute; nội thất cho c&aacute;c chung cư, cao ốc văn ph&ograve;ng, kh&aacute;ch sạn, showroom, biệt thự&hellip; với chất lượng kỹ thuật v&agrave; tr&igrave;nh độ thẩm mỹ cao mang t&iacute;nh chuy&ecirc;n nghiệp, hiện đại v&agrave; hiện tại những c&ocirc;ng tr&igrave;nh đ&oacute; đ&atilde; v&agrave; đang mang lại rất nhiều tiện &iacute;ch cho con người. Từ những th&agrave;nh c&ocirc;ng đ&oacute; Ki&ecirc;n Linh nhận thấy rằng phải lu&ocirc;n đổi mới phương thức phục vụ, nắm bắt xu hướng ph&aacute;t triển của x&atilde; hội để đề ra những ch&iacute;nh s&aacute;ch ph&aacute;t triển ti&ecirc;n phong, vượt trội tất cả nhằm mục ti&ecirc;u cuối c&ugrave;ng l&agrave; để phục vụ qu&yacute; kh&aacute;ch h&agrave;ng ng&agrave;y một tốt hơn.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nH&atilde;y để Ki&ecirc;n Linh mang tới vẻ đẹp sang trọng, lịch sự v&agrave; thật sự tiện nghi cho ng&ocirc;i nh&agrave; của qu&yacute; kh&aacute;ch.</p>\r\n', '2016-03-26 11:23:08', '2016-03-12 02:46:01');
 
 -- ----------------------------
 -- Table structure for comment
@@ -142,8 +142,8 @@ CREATE TABLE `danhmuc_con1` (
 -- ----------------------------
 -- Records of danhmuc_con1
 -- ----------------------------
-INSERT INTO `danhmuc_con1` VALUES ('1', '1', 'A1.1', 'A1.1', '2', '1', '2016-03-25 23:29:54', '2016-03-14 05:59:39');
-INSERT INTO `danhmuc_con1` VALUES ('2', '1', 'A1.2', 'A1.2', '2', '2', '2016-03-25 23:30:07', '2016-03-14 06:16:56');
+INSERT INTO `danhmuc_con1` VALUES ('1', '1', 'A1.1', 'A1.1', '2', '1', '2016-03-26 09:53:35', '2016-03-14 05:59:39');
+INSERT INTO `danhmuc_con1` VALUES ('2', '1', 'A1.2', 'A1.2', '2', '2', '2016-03-26 09:53:36', '2016-03-14 06:16:56');
 INSERT INTO `danhmuc_con1` VALUES ('3', '2', 'B1.1', 'B1.1', '2', '1', '2016-03-25 23:30:24', '0000-00-00 00:00:00');
 INSERT INTO `danhmuc_con1` VALUES ('4', '2', 'B1.2', 'B1.2', '2', '2', '2016-03-25 23:30:36', '0000-00-00 00:00:00');
 INSERT INTO `danhmuc_con1` VALUES ('5', '3', 'C1.1', 'C1.1', '2', '1', '2016-03-25 23:30:49', '0000-00-00 00:00:00');
@@ -230,18 +230,20 @@ CREATE TABLE `menu` (
   `title_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(5) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('1', 'Trang Chủ', 'Home', '0000-00-00 00:00:00', '2016-03-12 03:04:35');
-INSERT INTO `menu` VALUES ('2', 'Giới Thiệu', 'About Us', '0000-00-00 00:00:00', '2016-03-12 03:04:45');
-INSERT INTO `menu` VALUES ('3', 'Dịch Vụ', 'Services', '0000-00-00 00:00:00', '2016-03-12 03:04:52');
-INSERT INTO `menu` VALUES ('4', 'Sản Phẩm', 'Products', '0000-00-00 00:00:00', '2016-03-12 03:05:01');
-INSERT INTO `menu` VALUES ('5', 'Khuyến mãi', 'Sale Off', '0000-00-00 00:00:00', '2016-03-12 03:05:09');
-INSERT INTO `menu` VALUES ('6', 'Liên Hệ', 'Contact', '0000-00-00 00:00:00', '2016-03-12 03:05:18');
+INSERT INTO `menu` VALUES ('1', 'Trang Chủ', 'Home', '0000-00-00 00:00:00', '2016-03-12 03:04:35', 'trang-chu', '1');
+INSERT INTO `menu` VALUES ('2', 'Giới Thiệu', 'About Us', '0000-00-00 00:00:00', '2016-03-12 03:04:45', 'gioi-thieu', '1');
+INSERT INTO `menu` VALUES ('3', 'Dịch Vụ', 'Services', '0000-00-00 00:00:00', '2016-03-12 03:04:52', 'dich-vu', '1');
+INSERT INTO `menu` VALUES ('4', 'Sản Phẩm', 'Products', '0000-00-00 00:00:00', '2016-03-12 03:05:01', 'san-pham', '1');
+INSERT INTO `menu` VALUES ('5', 'Khuyến mãi', 'Sale Off', '0000-00-00 00:00:00', '2016-03-12 03:05:09', 'khuyen-mai', '0');
+INSERT INTO `menu` VALUES ('6', 'Liên Hệ', 'Contact', '0000-00-00 00:00:00', '2016-03-12 03:05:18', 'lien-he', '1');
 
 -- ----------------------------
 -- Table structure for product

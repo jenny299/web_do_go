@@ -27,6 +27,13 @@ class HomeController extends BaseController {
         }
     }
 
+    public function checkLanguage(){
+        if(Session::get('locale') != "vn" && Session::get('locale')!="en"){
+            Session::set('locale',"vn");
+        }
+        return Session::get('locale');
+    }
+
     public function getmenu(){
         $menu = array();
 
@@ -97,16 +104,121 @@ class HomeController extends BaseController {
     }
 
     public function getindex(){
-        $menuMain = menu::all();
+        $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Trang chủ";
+        else
+            $title = "Home";
        
         $data = array(
-            'title' => 'Home',
-            'menu' => 'home',
+            'title' => $title,
             'menuList' => $menuList,
-            'menuMain' => $menuMain
+            'menuMain' => $menuMain,
+            'menuActive' => '#trang-chu'
         );
         return View::make('home', $data);
+    }
+
+    public function home(){
+        $menuMain = menu::where('status','=',1)->get();
+        $menuList = $this->getmenu();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Trang chủ";
+        else
+            $title = "Home";
+       
+        $data = array(
+            'title' => $title,
+            'menuList' => $menuList,
+            'menuMain' => $menuMain,
+            'menuActive' => '#trang-chu'
+        );
+        return View::make('home', $data);
+    }
+
+    public function about(){
+        $menuMain = menu::where('status','=',1)->get();
+        $menuList = $this->getmenu();
+        $post = about::get()->first();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Giới thiệu";
+        else
+            $title = "About";
+       
+        $data = array(
+            'title' => $title,
+            'menuList' => $menuList,
+            'menuMain' => $menuMain,
+            'menuActive' => '#gioi-thieu',
+            'post' => $post
+        );
+        return View::make('about', $data);
+    }
+
+    public function services(){
+        $menuMain = menu::where('status','=',1)->get();
+        $menuList = $this->getmenu();
+        $post = service::get()->first();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Dịch vụ";
+        else
+            $title = "Services";
+       
+        $data = array(
+            'title' => $title,
+            'menuList' => $menuList,
+            'menuMain' => $menuMain,
+            'menuActive' => '#dich-vu',
+            'post' => $post
+        );
+        return View::make('services', $data);
+    }
+
+    public function contact(){
+        $menuMain = menu::where('status','=',1)->get();
+        $menuList = $this->getmenu();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Liên hệ";
+        else
+            $title = "Contact";
+       
+        $data = array(
+            'title' => $title,
+            'menuList' => $menuList,
+            'menuMain' => $menuMain,
+            'menuActive' => '#lien-he'
+        );
+        return View::make('staticpage', $data);
+    }
+
+    public function products(){
+        $menuMain = menu::where('status','=',1)->get();
+        $menuList = $this->getmenu();
+
+        $lang = $this->checkLanguage();
+        if($lang=="vn")
+            $title = "Sản phẩm";
+        else
+            $title = "Products";
+       
+        $data = array(
+            'title' => $title,
+            'menuList' => $menuList,
+            'menuMain' => $menuMain,
+            'menuActive' => '#san-pham'
+        );
+        return View::make('staticpage', $data);
     }
 
 }

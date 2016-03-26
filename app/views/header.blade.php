@@ -26,108 +26,113 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <!-- <div class="flexnav-menu-button" id="flexnav-menu-button">Menu</div> -->
+                @if(Session::get('locale')=='vn')
+                <div class="flexnav-menu-button" id="flexnav-menu-button">Danh mục</div>
                 <nav>
-                    @if(Session::get('locale')=='vn')
-                        <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
-                            @foreach($menuList as $menu1)
-                            <li><a href="#">{{$menu1['name']}}</a>
-                                @if(isset($menu1['menucon']))
-                                <ul>
-                                    @foreach($menu1['menucon'] as $menu2)
-                                    <li><a href="#">{{$menu2['name']}}</a>
-                                        @if(isset($menu2['menucon1']))
-                                        <ul>
-                                            @foreach($menu2['menucon1'] as $menu3)
-                                            <li><a href="#">{{$menu3['name']}}</a>
-                                                @if(isset($menu3['menucon2']))
-                                                <ul>
-                                                    @foreach($menu3['menucon2'] as $menu4)
-                                                    <li><a href="#">{{$menu4['name']}}</a></li>
-                                                    @endforeach
-                                                </ul>
-                                                @endif
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                        @endif
-                                    </li>
-                                    @endforeach
-                                </ul>
-                                @endif
-                            </li>
-                            @endforeach
-                        </ul>
-                    @elseif(Session::get('locale')=='en')
-                        <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
-                            @foreach($menuList as $menu1)
-                            <li><a href="#">{{$menu1['name_en']}}</a>
-                                @if(isset($menu1['menucon']))
-                                <ul>
-                                    @foreach($menu1['menucon'] as $menu2)
-                                    <li><a href="#">{{$menu2['name_en']}}</a>
-                                        @if(isset($menu2['menucon1']))
-                                        <ul>
-                                            @foreach($menu2['menucon1'] as $menu3)
-                                            <li><a href="#">{{$menu3['name_en']}}</a>
-                                                @if(isset($menu3['menucon2']))
-                                                <ul>
-                                                    @foreach($menu3['menucon2'] as $menu4)
-                                                    <li><a href="#">{{$menu4['name_en']}}</a></li>
-                                                    @endforeach
-                                                </ul>
-                                                @endif
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                        @endif
-                                    </li>
-                                    @endforeach
-                                </ul>
-                                @endif
-                            </li>
-                            @endforeach
-                        </ul>
-                    @else
-                        <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
-                            @foreach($menuList as $menu1)
-                            <li><a href="#">{{$menu1['name']}}</a>
-                                @if(isset($menu1['menucon']))
-                                <ul>
-                                    @foreach($menu1['menucon'] as $menu2)
-                                    <li><a href="#">{{$menu2['name']}}</a>
-                                        @if(isset($menu2['menucon1']))
-                                        <ul>
-                                            @foreach($menu2['menucon1'] as $menu3)
-                                            <li><a href="#">{{$menu3['name']}}</a>
-                                                @if(isset($menu3['menucon2']))
-                                                <ul>
-                                                    @foreach($menu3['menucon2'] as $menu4)
-                                                    <li><a href="#">{{$menu4['name']}}</a></li>
-                                                    @endforeach
-                                                </ul>
-                                                @endif
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                        @endif
-                                    </li>
-                                    @endforeach
-                                </ul>
-                                @endif
-                            </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                    
+                    <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
+                        @foreach($menuList as $menu1)
+                        <li><a href="#">{{$menu1['name']}}</a>
+                            @if(isset($menu1['menucon']))
+                            <ul>
+                                @foreach($menu1['menucon'] as $menu2)
+                                <li><a href="#">{{$menu2['name']}}</a>
+                                    @if(isset($menu2['menucon1']))
+                                    <ul>
+                                        @foreach($menu2['menucon1'] as $menu3)
+                                        <li><a href="#">{{$menu3['name']}}</a>
+                                            @if(isset($menu3['menucon2']))
+                                            <ul>
+                                                @foreach($menu3['menucon2'] as $menu4)
+                                                <li><a href="#">{{$menu4['name']}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                            @endif
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                </li>
+                                @endforeach
+                            </ul>
+                            @endif
+                        </li>
+                        @endforeach
+                    </ul>
                 </nav>
+                @elseif(Session::get('locale')=='en')
+                <div class="flexnav-menu-button" id="flexnav-menu-button">Menu</div>
+                <nav>
+                    <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
+                        @foreach($menuList as $menu1)
+                        <li><a href="#">{{$menu1['name_en']}}</a>
+                            @if(isset($menu1['menucon']))
+                            <ul>
+                                @foreach($menu1['menucon'] as $menu2)
+                                <li><a href="#">{{$menu2['name_en']}}</a>
+                                    @if(isset($menu2['menucon1']))
+                                    <ul>
+                                        @foreach($menu2['menucon1'] as $menu3)
+                                        <li><a href="#">{{$menu3['name_en']}}</a>
+                                            @if(isset($menu3['menucon2']))
+                                            <ul>
+                                                @foreach($menu3['menucon2'] as $menu4)
+                                                <li><a href="#">{{$menu4['name_en']}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                            @endif
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                </li>
+                                @endforeach
+                            </ul>
+                            @endif
+                        </li>
+                        @endforeach
+                    </ul>
+                </nav>
+                @else
+                <div class="flexnav-menu-button" id="flexnav-menu-button">Danh mục</div>
+                <nav>
+                    <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
+                        @foreach($menuList as $menu1)
+                        <li><a href="#">{{$menu1['name']}}</a>
+                            @if(isset($menu1['menucon']))
+                            <ul>
+                                @foreach($menu1['menucon'] as $menu2)
+                                <li><a href="#">{{$menu2['name']}}</a>
+                                    @if(isset($menu2['menucon1']))
+                                    <ul>
+                                        @foreach($menu2['menucon1'] as $menu3)
+                                        <li><a href="#">{{$menu3['name']}}</a>
+                                            @if(isset($menu3['menucon2']))
+                                            <ul>
+                                                @foreach($menu3['menucon2'] as $menu4)
+                                                <li><a href="#">{{$menu4['name']}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                            @endif
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                </li>
+                                @endforeach
+                            </ul>
+                            @endif
+                        </li>
+                        @endforeach
+                    </ul>
+                </nav>
+                @endif
             </div>
             <div class="col-md-3">
                 <div class="language-menu">
-                    <a href="{{Asset('/lang/vn')}}"><i class="fa fa-sign-in"></i>Vietnamese</a>
+                    <a href="{{Asset('/lang/vn')}}">Vietnamese</a>
                 </div>
                 <div class="language-menu">
-                    <a href="{{Asset('/lang/en')}}"><i class="fa fa-sign-in"></i>English</a>
+                    <a href="{{Asset('/lang/en')}}">English</a>
                 </div>
             </div>
             <div class="col-md-3">

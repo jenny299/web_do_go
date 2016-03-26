@@ -16,20 +16,14 @@ class HomeController extends BaseController {
 
     public function lang($v){
         if($v=="en"){
-            // $home = home::get();
            Session::set('locale',$v);
            return Redirect::back();
-           // return Redirect::back()->with('home',$home);
         }elseif($v=="vn"){
-            // $home = home::get();
            Session::set('locale',$v);
            return Redirect::back();
-           // return Redirect::back()->with('home',$home);
         }else{
-           // $home = home::get();
            Session::set('locale',$v);
            return Redirect::back();
-           // return Redirect::back()->with('home',$home);
         }
     }
 
@@ -100,48 +94,17 @@ class HomeController extends BaseController {
            }
        }
        return $menu;
-
-      /* foreach($menu as $menu1){
-        echo $menu1['id'];
-       }
-
-       echo "<pre>";
-       print_r($menu);
-       echo "</pre>";*/
     }
 
     public function getindex(){
+        $menuMain = menu::all();
         $menuList = $this->getmenu();
-      /*  echo "<pre>";
-        print_r($menuList);
-        echo "</pre>";exit();*/
-       /* foreach($menuList as $menu1){
-            echo $menu1['name']."<br>";
-            if(isset($menu1['menucon'])){
-                foreach($menu1['menucon'] as $menu2){
-                    echo "----".$menu2['name']."<br>";
-
-                    if(isset($menu2['menucon1'])){
-                        foreach($menu2['menucon1'] as $menu3){
-                             echo "----------".$menu3['name']."<br>";
-                            if(isset($menu3['menucon2'])){
-                                foreach($menu3['menucon2'] as $menu4){
-                                    echo "--------------".$menu4['name']."<br>";
-                                }
-                            }
-                        }
-                    }
-                }
-                echo "<hr>";
-            }
-        }
-        exit();*/
-
        
         $data = array(
             'title' => 'Home',
             'menu' => 'home',
-            'menuList' => $menuList
+            'menuList' => $menuList,
+            'menuMain' => $menuMain
         );
         return View::make('home', $data);
     }

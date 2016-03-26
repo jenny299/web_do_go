@@ -183,7 +183,7 @@
     $(document).ready(function(){
         $($("#menuActive").val()).addClass('active');
 
-        $("li").on("click", function(){
+        $("ul:not('.list') li").on("click", function(){
             $("li").removeClass("active");
             $(this).addClass("active");
         });

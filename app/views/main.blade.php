@@ -61,11 +61,9 @@
         <div class="container">
             <div class="gap gap-small"></div>
                 <div class="row">
-                    @include('left_menu')
 
                     @yield('content')
                     
-                    @include('right_menu')
                 </div>
                 <div class="gap"></div>
         </div>
@@ -97,7 +95,7 @@
         <script src="{{Asset('js/tweet.min.js')}}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script src="{{Asset('js/fitvids.min.js')}}"></script>
-        <script src="{{Asset('js/mail.min.js')}}"></script>
+        <script src="{{Asset('js/mail.js')}}"></script>
         <script src="{{Asset('js/ionrangeslider.js')}}"></script>
         <script src="{{Asset('js/icheck.js')}}"></script>
         <script src="{{Asset('js/fotorama.js')}}"></script>

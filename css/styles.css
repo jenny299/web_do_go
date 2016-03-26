@@ -6669,6 +6669,19 @@ li.active{
   padding-right: 10px;
 }
 
+.info-contact-cus ul li{
+  line-height:20px;
+  margin-bottom: 5px;
+}
+
+.info-contact-cus ul li label{
+  font-weight: bold;
+}
+
+.info-contact-cus ul li:active{
+  background-color: #F2F2F2;
+}
+
 /*  .nav-tabs.nav-stacked.nav-coupon-category{
  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important;
  box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important; 

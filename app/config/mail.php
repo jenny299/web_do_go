@@ -32,7 +32,7 @@ return array(
 
 
 
-	'driver' => 'mail',
+	'driver' => 'smtp',
 
 
 
@@ -58,7 +58,7 @@ return array(
 
 
 
-	'host' => '101.0.76.3',
+	'host' => 'smtp.gmail.com',
 
 
 
@@ -110,7 +110,7 @@ return array(
 
 
 
-	'from' => array('address' => 'sales@gulfwestern.com.au', 'name' => 'Timax Website'),
+	'from' => array('address' => null, 'name' => null),
 
 
 
@@ -162,7 +162,7 @@ return array(
 
 
 
-	'username' => 'sales@gulfwestern.com.au',
+	'username' => 'jenny29992@gmail.com',
 
 
 
@@ -188,7 +188,7 @@ return array(
 
 
 
-	'password' => 'Secure2k13!',
+	'password' => '26101952',
 
 
 

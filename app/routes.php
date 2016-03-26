@@ -54,6 +54,7 @@ Route::get('dich-vu',array('as' => 'dich-vu' , 'uses' =>'HomeController@services
 Route::get('khuyen-mai',array('as' => 'khuyen-mai' , 'uses' =>'HomeController@sale'));
 Route::get('san-pham',array('as' => 'san-pham' , 'uses' =>'HomeController@products'));
 Route::get('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@contact'));
+Route::post('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@sendcontact'));
 
 //admincontroller
 Route::group(array('prefix' =>'admin','before' =>'authAdmin'),function()

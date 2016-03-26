@@ -103,9 +103,15 @@ class HomeController extends BaseController {
        return $menu;
     }
 
+    public function getFooter(){
+        $footer = contact::take(2)->get();
+        return $footer;
+    }
+
     public function getindex(){
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -117,7 +123,8 @@ class HomeController extends BaseController {
             'title' => $title,
             'menuList' => $menuList,
             'menuMain' => $menuMain,
-            'menuActive' => '#trang-chu'
+            'menuActive' => '#trang-chu',
+            'footer' => $footer,
         );
         return View::make('home', $data);
     }
@@ -125,6 +132,7 @@ class HomeController extends BaseController {
     public function home(){
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -136,7 +144,8 @@ class HomeController extends BaseController {
             'title' => $title,
             'menuList' => $menuList,
             'menuMain' => $menuMain,
-            'menuActive' => '#trang-chu'
+            'menuActive' => '#trang-chu',
+            'footer' => $footer,
         );
         return View::make('home', $data);
     }
@@ -145,6 +154,7 @@ class HomeController extends BaseController {
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
         $post = about::get()->first();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -157,7 +167,8 @@ class HomeController extends BaseController {
             'menuList' => $menuList,
             'menuMain' => $menuMain,
             'menuActive' => '#gioi-thieu',
-            'post' => $post
+            'post' => $post,
+            'footer' => $footer,
         );
         return View::make('about', $data);
     }
@@ -166,6 +177,7 @@ class HomeController extends BaseController {
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
         $post = service::get()->first();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -178,7 +190,8 @@ class HomeController extends BaseController {
             'menuList' => $menuList,
             'menuMain' => $menuMain,
             'menuActive' => '#dich-vu',
-            'post' => $post
+            'post' => $post,
+            'footer' => $footer,
         );
         return View::make('services', $data);
     }
@@ -186,6 +199,7 @@ class HomeController extends BaseController {
     public function contact(){
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -197,14 +211,16 @@ class HomeController extends BaseController {
             'title' => $title,
             'menuList' => $menuList,
             'menuMain' => $menuMain,
-            'menuActive' => '#lien-he'
+            'menuActive' => '#lien-he',
+            'footer' => $footer,
         );
-        return View::make('staticpage', $data);
+        return View::make('contact', $data);
     }
 
     public function products(){
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
+        $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -216,9 +232,31 @@ class HomeController extends BaseController {
             'title' => $title,
             'menuList' => $menuList,
             'menuMain' => $menuMain,
-            'menuActive' => '#san-pham'
+            'menuActive' => '#san-pham',
+            'footer' => $footer,
         );
         return View::make('staticpage', $data);
+    }
+
+     public function sendcontact(){
+        // echo 1;
+        $companyEmail = "anhtuyet299@gmail.com";
+        $mail = "jenny29992@gmail.com";
+        $dataEmail = array(
+            'name' => Input::get('name'),
+            'email' => Input::get('email'),
+            'messages' => Input::get('message'),
+            'companyEmail' => $companyEmail,
+            'mailSend' => $mail,
+        );
+        Mail::send('template_send_mail',$dataEmail,function($mess) use ($dataEmail){
+            $mess->from($dataEmail['mailSend'],$dataEmail['email']);
+            $mess->to($dataEmail['companyEmail']);
+            $mess->subject("Liên hệ từ khách hàng");
+        });
+
+        echo "sent";
+    
     }
 
 }

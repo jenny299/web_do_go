@@ -5,6 +5,8 @@
 
 @section('content')
 
+@include('left_menu')
+
 <div class="col-md-6 no-padding-left-right ">
     <div class="row row-wrap wrapper-content-post">
         @if(Session::get('locale')=='vn')
@@ -24,6 +26,8 @@
         </div>
       	@endif
     </div>
-          
 </div>
+
+@include('right_menu')
+
 @endsection

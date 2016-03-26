@@ -10,7 +10,7 @@
       <div id="map-canvas" style="width:100%; height:300px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.169790183011!2d106.735291!3d10.843045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc02c995ec34ccec9!2sVietnam+Kien+Linh+JSC!5e0!3m2!1sen!2sus!4v1458987794517" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
-  </div>
+  </div> 
   <div class="col-md-3">
       <form name="contactForm" id="contact-form" class="contact-form" method="post">
           <input type="text" id="action_url" style="display:none;" value="{{Asset('/lien-he')}}">

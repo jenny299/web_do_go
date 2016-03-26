@@ -1,0 +1,22 @@
+body {
+	padding: 0px;
+	text-align: center;
+	margin: 0px;
+}
+#container {
+	width: auto;
+	height: 1400px;
+	text-align: center;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../home.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+#slider {
+	top: 130px;
+	margin: auto;
+}

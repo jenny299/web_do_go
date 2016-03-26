@@ -1,0 +1,186 @@
+.zoomnav {
+	background-color: #eee;
+	cursor: url(../images/openhand.cur), default;
+	height: 400px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.zoomnav-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+}
+
+.zoomnav-content img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.dragging {
+	cursor: url(../images/closedhand.cur), move;
+}
+
+/* Positions */
+.top-left {
+	top: 0;
+	left: 0;
+}
+
+.top-right {
+	top: 0;
+	right: 0;
+}
+
+.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+/* COMPONENTS */
+/* Minimap */
+.zoomnav-minimap {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: default;
+	margin: 20px;
+	position: absolute;
+	width: 140px;
+	overflow: hidden;
+}
+
+.zoomnav-minimap img {
+	width: 100%;
+}
+
+.zoomnav-minimap-background {
+	-moz-filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+
+.zoomnav-minimap-overlay {
+	background: url(../images/alpha50.png);
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.zoomnav-minimap-active {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+/* Buttons */
+.zoomnav a {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Arrow Buttons */
+.zoomnav-arrowbuttons {
+	background: url(../images/arrows-bg.png); /* IE fallback */
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 40px;
+
+	overflow: hidden;
+	margin: 20px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+}
+
+.zoomnav-arrowbuttons a {
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 33.33%;
+	height: 33.33%;
+	position: absolute;
+}
+
+a.disabled {
+	cursor: default;
+	opacity: 0.4;
+}
+
+.zoomnav-buttontop {
+	background-image: url(../images/arrow-top.png);
+	top: 0;
+	left: 33.33%;
+}
+
+.zoomnav-buttonright {
+	background-image: url(../images/arrow-right.png);
+	right: 0;
+	top: 33.33%;
+}
+
+.zoomnav-buttonbottom {
+	background-image: url(../images/arrow-bottom.png);
+	bottom: 0;
+	left: 33.33%;
+}
+
+.zoomnav-buttonleft {
+	background-image: url(../images/arrow-left.png);
+	left: 0;
+	top: 33.33%;
+}
+
+.zoomnav-buttoncenter {
+	background-image: url(../images/center.png);
+	left: 33.33%;
+	top: 33.33%;
+}
+
+/* Zoom Buttons */
+.zoomnav-zoombuttons {
+	margin: 20px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 24px;
+}
+
+.zoomnav-zoombuttons a {
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-position: center;
+	background-repeat: no-repeat;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.zoomnav-zoomin { 
+	background-image: url(../images/plus.png);
+	margin-bottom: 10px !important;
+}
+
+.zoomnav-zoomout {
+	background-image: url(../images/minus.png);
+}

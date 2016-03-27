@@ -120,9 +120,6 @@
             </div>
         </a>
         
-        
-       
-      
     </div>
 </div>
 @include('right_menu')

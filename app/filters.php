@@ -40,6 +40,19 @@ App::before(function($request)
 
 	$menu_6 = menu::find(6);
 	View::share('menu_6',$menu_6); 
+
+	$contact = contact::take(2)->get();
+	View::share('footer',$contact); 
+	View::share('lat',$contact[0]->maps_latitude); 
+	View::share('log',$contact[0]->maps_longitude); 
+
+	//List menu of product 
+    $menuList = (new HomeController)->getmenu();
+    View::share('menuList',$menuList); 
+
+    //List menu top like home, product, about,...
+    $menuMain = menu::where('status','=',1)->get();
+    View::share('menuMain',$menuMain); 
 });
 
 

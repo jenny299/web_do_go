@@ -4,19 +4,19 @@
         <h3 class="mb20">Danh mục sản phẩm</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
             @foreach($menuList as $menu1)
-            <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
+            <li><a class="first-li"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
                 @if(isset($menu1['menucon']))
                 <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><a href="#">{{$menu2['name']}}</a>
+                    <li><i></i><a>{{$menu2['name']}}</a>
                         @if(isset($menu2['menucon1']))
                         <ul>
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><a href="#">{{$menu3['name']}}</a>
+                            <li><i></i><a>{{$menu3['name']}}</a>
                                 @if(isset($menu3['menucon2']))
                                 <ul>
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><a href="#">{{$menu4['name']}}</a></li>
+                                    <li><i></i><a>{{$menu4['name']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -34,20 +34,20 @@
         @elseif(Session::get('locale')=='en') 
         <h3 class="mb20">Category List</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
-            @foreach($menuList as $menu1)
-            <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name_en']}}</a>
+             @foreach($menuList as $menu1)
+            <li><a class="first-li"><i class="fa  fa-bars"></i>{{$menu1['name_en']}}</a>
                 @if(isset($menu1['menucon']))
                 <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><a href="#">{{$menu2['name_en']}}</a>
+                    <li><i></i><a>{{$menu2['name_en']}}</a>
                         @if(isset($menu2['menucon1']))
                         <ul>
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><a href="#">{{$menu3['name_en']}}</a>
+                            <li><i></i><a>{{$menu3['name_en']}}</a>
                                 @if(isset($menu3['menucon2']))
                                 <ul>
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><a href="#">{{$menu4['name_en']}}</a></li>
+                                    <li><i></i><a>{{$menu4['name_en']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -65,20 +65,20 @@
         @else
         <h3 class="mb20">Danh mục sản phẩm</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
-            @foreach($menuList as $menu1)
-            <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
+             @foreach($menuList as $menu1)
+            <li><a class="first-li"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
                 @if(isset($menu1['menucon']))
                 <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><a href="#">{{$menu2['name']}}</a>
+                    <li><i></i><a>{{$menu2['name']}}</a>
                         @if(isset($menu2['menucon1']))
                         <ul>
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><a href="#">{{$menu3['name']}}</a>
+                            <li><i></i><a>{{$menu3['name']}}</a>
                                 @if(isset($menu3['menucon2']))
                                 <ul>
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><a href="#">{{$menu4['name']}}</a></li>
+                                    <li><i></i><a>{{$menu4['name']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -186,12 +186,36 @@
         $( '.left-menu li' ).each( function() {
             if( $( this ).children( 'ul' ).length > 0 ) {
                 $( this ).addClass( 'father' );     
+                $( this ).children( 'i' ).addClass("fa fa-plus-square");     
             }
         });
      
-        $( '.left-menu li.father > a' ).click( function( ) {
+        $( '.left-menu li.father > a.first-li' ).click( function( ) {
             $( this ).parent("li").toggleClass( 'active-cus' );
             $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
+
+            if($( this ).prev("i").hasClass('fa-plus-square')){
+                $( this ).prev("i").removeClass( 'fa-plus-square' );
+                $( this ).prev("i").addClass( 'fa-minus-square' );
+            }
+            else{
+                $( this ).prev("i").removeClass( 'fa-minus-square' );
+                $( this ).prev("i").addClass( 'fa-plus-square' );
+            }
+        });
+
+        $( '.left-menu li.father > i' ).click( function( ) {
+            $( this ).parent("li").toggleClass( 'active-cus' );
+            $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
+
+            if($( this ).hasClass('fa-plus-square')){
+                $( this ).removeClass( 'fa-plus-square' );
+                $( this ).addClass( 'fa-minus-square' );
+            }
+            else{
+                $( this ).removeClass( 'fa-minus-square' );
+                $( this ).addClass( 'fa-plus-square' );
+            }
         });
 
 

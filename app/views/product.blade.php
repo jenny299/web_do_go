@@ -36,7 +36,7 @@
         @endforeach
     </div>
 
-    <div>{{$productList->links()}}</div>
+    {{$productList->links()}}
 </div>
 @include('right_menu')
 @endsection

@@ -6741,6 +6741,10 @@ ul.left-menu, .menu-left ul{
 .left-menu ul li{
   line-height: 40px;
 }
+.left-menu ul li a.first-li:active{
+  background: #795433 !important;
+}
+
 .left-menu li a {
     line-height: 25px;
 }
@@ -6752,9 +6756,9 @@ ul.left-menu, .menu-left ul{
     text-decoration: none;
 }
 .left-menu li.father > a {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 10px;
 }
- .left-menu ul:not(.main-ul) li.father > a:before {
+ /* .left-menu ul:not(.main-ul) li.father > a:before {
     background-image: url("../includes/plus_minus_icons.png");
     background-position: 25px center;
      content: ""; 
@@ -6765,10 +6769,10 @@ ul.left-menu, .menu-left ul{
     top: 8px;
     vertical-align: middle;
     width: 23px;
-} 
-.left-menu li.active-cus > a:before {
+ } 
+ .left-menu li.active-cus > a:before {
     background-position: 0 center !important;
-}
+ } */
 .left-menu ul li ul {
     border-left: 1px solid #D9DADB;
     display: none;

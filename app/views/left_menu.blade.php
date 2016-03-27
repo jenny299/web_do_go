@@ -194,14 +194,14 @@
             $( this ).parent("li").toggleClass( 'active-cus' );
             $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
 
-            if($( this ).prev("i").hasClass('fa-plus-square')){
+/*            if($( this ).prev("i").hasClass('fa-plus-square')){
                 $( this ).prev("i").removeClass( 'fa-plus-square' );
                 $( this ).prev("i").addClass( 'fa-minus-square' );
             }
             else{
                 $( this ).prev("i").removeClass( 'fa-minus-square' );
                 $( this ).prev("i").addClass( 'fa-plus-square' );
-            }
+            }*/
         });
 
         $( '.left-menu li.father > i' ).click( function( ) {

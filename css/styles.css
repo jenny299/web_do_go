@@ -6743,6 +6743,7 @@ ul.left-menu, .menu-left ul{
 }
 .left-menu ul li a.first-li:active{
   background: #795433 !important;
+  color: #FFF !important;
 }
 
 .left-menu li a {

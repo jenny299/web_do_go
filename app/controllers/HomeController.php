@@ -202,10 +202,16 @@ class HomeController extends BaseController {
         $footer = $this->getFooter();
 
         $lang = $this->checkLanguage();
-        if($lang=="vn")
+        if($lang=="vn"){
             $title = "Liên hệ";
-        else
+            $lat = $footer[0]->maps_latitude;
+            $log = $footer[0]->maps_longitude;
+        }
+        else{
             $title = "Contact";
+            $lat = $footer[0]->maps_latitude;
+            $log = $footer[0]->maps_longitude;
+        }
        
         $data = array(
             'title' => $title,
@@ -213,6 +219,8 @@ class HomeController extends BaseController {
             'menuMain' => $menuMain,
             'menuActive' => '#lien-he',
             'footer' => $footer,
+            'lat' => $lat,
+            'log' => $log,
         );
         return View::make('contact', $data);
     }
@@ -241,7 +249,7 @@ class HomeController extends BaseController {
      public function sendcontact(){
         // echo 1;
         $companyEmail = "anhtuyet299@gmail.com";
-        $mail = "jenny29992@gmail.com";
+        $mail = "mailserver9563@gmail.com";
         $dataEmail = array(
             'name' => Input::get('name'),
             'email' => Input::get('email'),

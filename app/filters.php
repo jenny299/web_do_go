@@ -53,6 +53,10 @@ App::before(function($request)
     //List menu top like home, product, about,...
     $menuMain = menu::where('status','=',1)->get();
     View::share('menuMain',$menuMain); 
+
+    $background_config = configsite::get()->first();
+    View::share('background_config',$background_config->anhnen); 
+
 });
 
 

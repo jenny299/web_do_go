@@ -21,6 +21,25 @@ App::before(function($request)
 {
 	$profile= profile::where('user_id',"=",1)->get();
 	View::share('profile',$profile);
+		
+	//menu
+	$menu_1 = menu::find(1);
+	View::share('menu_1',$menu_1);
+
+	$menu_2 = menu::find(2);
+	View::share('menu_2',$menu_2);
+
+	$menu_3 = menu::find(3);
+	View::share('menu_3',$menu_3);
+
+	$menu_4 = menu::find(4);
+	View::share('menu_4',$menu_4);
+
+	$menu_5 = menu::find(5);
+	View::share('menu_5',$menu_5); 
+
+	$menu_6 = menu::find(6);
+	View::share('menu_6',$menu_6); 
 });
 
 

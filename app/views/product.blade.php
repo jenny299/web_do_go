@@ -4,30 +4,39 @@
 @endsection
 
 @section('content')
-
 @include('left_menu')
-
-<div class="col-md-6 no-padding-left-right ">
-    <div class="row row-wrap wrapper-content-post">
-        @if(Session::get('locale')=='vn')
-        <h3 class="mb20">CTY CP KIÊN LINH VIỆT NAM</h3>
-        <div class="col-md-12 content-post ">
-			{{$post->about}}
-        </div>
-      	@elseif(Session::get('locale')=='en')
-      	<h3 class="mb20">KIEN LINH VIET NAM COMPANY</h3>
-        <div class="col-md-12 content-post ">
-			{{$post->about_en}}
-        </div>
-      	@else
-      	<h3 class="mb20">CTY CP KIÊN LINH VIỆT NAM</h3>
-        <div class="col-md-12 content-post ">
-			{{$post->about}}
-        </div>
-      	@endif
+<div class="col-md-6">
+    <div class="row row-wrap" id="masonry">
+        @foreach($productList as $p)
+          <a class="col-md-4 col-masonry popup-text" href="#product-quick-view-dialog" data-effect="mfp-move-from-top">
+             <div class="product-thumb">
+                 <header class="product-header">
+                     <img src="{{url($p->image)}}" alt="Image Alternative text" title="Green Furniture" />
+                     <div class="product-quick-view"><span class="fa fa-eye"></span>
+                     </div>
+                 </header>
+                 <div class="product-inner">
+                     <h5 class="product-title">
+                        @if(Session::get('locale')=='vn')
+                          <?php echo str_limit(strip_tags($p->name), $limit = 25, $end = '...'); ?>
+                        @elseif(Session::get('locale')=='en') 
+                          <?php echo str_limit(strip_tags($p->name_en), $limit = 25, $end = '...'); ?>
+                        @else
+                          <?php echo str_limit(strip_tags($p->name), $limit = 25, $end = '...'); ?>
+                        @endif
+                    </h5>
+                     <div class="product-meta">
+                         <ul class="product-price-list">
+                             <li><span class="product-price">{{$p->gia}} VND </span></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </a>
+        @endforeach
     </div>
+
+    <div>{{$productList->links()}}</div>
 </div>
-
 @include('right_menu')
-
 @endsection

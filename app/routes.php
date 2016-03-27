@@ -16,7 +16,7 @@ Route::get('login', array('uses' => 'AdminController@showLogin'));
 Route::post('login', array('uses' => 'AdminController@doLogin'));
 Route::get('logout', array('uses' => 'AdminController@doLogout'));
 
-Route::get('/','HomeController@getindex');
+Route::get('/','HomeController@home');
 
 
 //// Sản Phẩm

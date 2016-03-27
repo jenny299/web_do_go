@@ -103,22 +103,10 @@ class HomeController extends BaseController {
        return $menu;
     }
 
-    public function getindex(){
-        $lang = $this->checkLanguage();
-        if($lang=="vn")
-            $title = "Trang chủ";
-        else
-            $title = "Home";
-       
-        $data = array(
-            'title' => $title,
-            'menuActive' => '#trang-chu',
-        );
-        return View::make('home', $data);
-    }
-
     public function home(){
         $lang = $this->checkLanguage();
+        $product = product::take(6)->orderBy('updated_at')->get();
+
         if($lang=="vn")
             $title = "Trang chủ";
         else
@@ -127,6 +115,7 @@ class HomeController extends BaseController {
         $data = array(
             'title' => $title,
             'menuActive' => '#trang-chu',
+            'product' => $product,
         );
         return View::make('home', $data);
     }
@@ -183,7 +172,7 @@ class HomeController extends BaseController {
     }
 
     public function products(){
-        $productList = product::all();
+        $productList = product::paginate(10);
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -193,6 +182,7 @@ class HomeController extends BaseController {
        
         $data = array(
             'title' => $title,
+            'productList' => $productList,
             'menuActive' => '#san-pham',
         );
         return View::make('product', $data);

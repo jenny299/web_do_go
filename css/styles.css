@@ -2259,7 +2259,7 @@ footer.main a {
   color: #fff;
   background: #227297;
 }
-ul.pagination {
+/* ul.pagination {
   -webkit-box-shadow: none;
   box-shadow: none;
   margin: 0;
@@ -2294,7 +2294,7 @@ ul.pagination li.prev a:before {
 }
 ul.pagination li.next a:before {
   content: '\f054';
-}
+} */
 .box {
   background: #fff;
   padding: 15px 20px;
@@ -6787,3 +6787,47 @@ ul.left-menu, .menu-left ul{
     top: 12px;
     width: 15px;
 }
+
+.btn:hover{
+  /*background: #563d27;*/
+  background: #795433;
+}
+
+.btn:hover.view-all{
+  color: #FFF !important;
+}
+
+.view-all{
+  font-size:20px; 
+  color:#795433; 
+  /*padding: 5px 33px !important;*/
+  border-bottom: 1px solid #795433;
+  padding-bottom: 2px;
+}
+
+.view-all:hover{
+  border-bottom: 1px solid red;
+  color: red !important;
+  /* border-bottom: 1px solid #563d27;
+  color: #563d27; */
+}
+a.view-all:visited,
+a.view-all:active,
+a.view-all:link{
+  color:#795433; 
+  text-decoration: none !important;
+}
+
+.product-header img{
+  height: 140px !important;
+}
+ 
+ .pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus{
+    background-color: #795433 !important;  
+    border-color: #795433 !important;
+}  

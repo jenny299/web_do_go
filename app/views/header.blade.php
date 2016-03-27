@@ -75,7 +75,7 @@
                     <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
                         @foreach($menuMain as $mm)
                             @if($mm->id == 4)
-                            <li><a href="#">{{$mm->title_en}}</a>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title_en}}</a>
                                 <ul>
                                 @foreach($menuList as $menu1)
                                 <li><a href="#">{{$menu1['name_en']}}</a>
@@ -107,7 +107,7 @@
                                 </ul>
                             </li>
                             @else
-                            <li><a href="#">{{$mm->title_en}}</a></li>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title_en}}</a></li>
                             @endif
                         @endforeach
                     </ul>
@@ -118,7 +118,7 @@
                     <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
                         @foreach($menuMain as $mm)
                             @if($mm->id == 4)
-                            <li><a href="#">{{$mm->title}}</a>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a>
                                 <ul>
                                 @foreach($menuList as $menu1)
                                 <li><a href="#">{{$menu1['name']}}</a>
@@ -150,7 +150,7 @@
                                 </ul>
                             </li>
                             @else
-                            <li><a href="#">{{$mm->title}}</a></li>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a></li>
                             @endif
                         @endforeach
                     </ul>

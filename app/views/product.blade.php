@@ -17,11 +17,12 @@
     
     @if($productList->getTotal() > 0)
         @foreach($productList as $p)
-          <a class="col-md-4 col-masonry popup-text" href="#product-quick-view-dialog" data-effect="mfp-move-from-top">
+          <a class="col-md-4 col-masonry" href="#product-quick-view-dialog" data-effect="mfp-move-from-top">
              <div class="product-thumb">
                  <header class="product-header">
-                     <img src="{{url($p->image)}}" alt="Image Alternative text" title="Green Furniture" />
-                     <div class="product-quick-view"><span class="fa fa-eye"></span>
+                     <img src="{{url($p->image)}}" alt="{{$p->name}}" title="Green Furniture" />
+                     <div class="product-quick-view">
+                        <!-- <span class="fa fa-eye"></span> -->
                      </div>
                  </header>
                  <div class="product-inner">

@@ -6849,3 +6849,7 @@ a.view-all:link{
 .sidebar-box ul li{
   line-height: 20px;
 }
+
+ul.main-ul li:hover{
+  cursor: pointer;
+}

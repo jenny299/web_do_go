@@ -5,9 +5,17 @@
 
 @section('content')
 @include('left_menu')
-<div class="col-md-6" style="margin-top:18px;">
+<div class="col-md-6">
     <!-- <div>{{$productList->count()}}</div> -->
-    <div class="row row-wrap" id="masonry" >
+    @if($isSearch == "1" || $productList->getTotal() <= 0)
+        <h3 class="mb20">{{$msgProduct}}</h3>
+    <div class="row row-wrap" id="masonry" style="margin-top:20px">
+
+    @else
+    <div class="row row-wrap" id="masonry" style="margin-top:48px">
+    @endif
+    
+    @if($productList->getTotal() > 0)
         @foreach($productList as $p)
           <a class="col-md-4 col-masonry popup-text" href="#product-quick-view-dialog" data-effect="mfp-move-from-top">
              <div class="product-thumb">
@@ -35,6 +43,8 @@
              </div>
          </a>
         @endforeach
+    @endif
+        
     </div>
 
     {{$productList->appends(Request::get('search'))->links();}}

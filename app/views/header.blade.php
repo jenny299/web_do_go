@@ -167,7 +167,7 @@
             </div>
             <div class="col-md-3">
                 <div class="pull-right">
-                    <form method="get" action="{{Asset('tim-kiem')}}?search=Input::get('search')">
+                    <form method="get" action="{{Asset('')}}?search=Input::get('search')">
                         <div class="header-search-bar">
                             @if(Session::get('locale')=='vn')
                                 <label>Tìm</label>

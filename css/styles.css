@@ -6840,3 +6840,12 @@ a.view-all:link{
     background-color: #795433 !important;  
     border-color: #795433 !important;
 }  
+
+.sidebar-box ul li,
+.sidebar-box ul{
+  background: #FFF !important; 
+}
+
+.sidebar-box ul li{
+  line-height: 20px;
+}

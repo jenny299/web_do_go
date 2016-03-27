@@ -172,18 +172,58 @@ class HomeController extends BaseController {
     }
 
     public function products(){
-        $productList = product::paginate(9);
-
+        $content = Input::get("search");
         $lang = $this->checkLanguage();
-        if($lang=="vn")
+        $isSearch = 0;
+        $msg = "";
+
+        if($content!=""){
+            if($lang=="vn"){
+                $title = "Sản phẩm";
+                $productList = product::distinct('id')->where('name','LIKE','%'.$content.'%')->orWhere('mota','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
+
+                if($productList->getTotal() > 0)
+                    $msg = $productList->getTotal()." products were found.";
+                else
+                    $msg = "No products was found.";
+            }
+            else{
+                $title = "Products";
+                $productList = product::distinct('id')->where('name_en','LIKE','%'.$content.'%')->orWhere('mota_en','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
+
+                if($productList->getTotal() > 0)
+                    $msg = $productList->getTotal()." sản phẩm được tìm thấy.";
+                else
+                    $msg = "Khôg có sản phẩm nào được tìm thấy.";
+                
+            }
+            $isSearch = 1;
+        }
+        else{
+            $productList = product::paginate(9);
+            if($lang=="vn"){
+                if($productList->getTotal() <= 0)
+                   $msg = "Sản phẩm đang được cập nhật.";
+            }
+            else{
+                if($productList->getTotal() <= 0)
+                   $msg = "Products is being updated.";
+            }
+        }
+
+        if($lang=="vn"){
             $title = "Sản phẩm";
-        else
+        }
+        else{
             $title = "Products";
-       
+        }
+
         $data = array(
             'title' => $title,
             'productList' => $productList,
             'menuActive' => '#san-pham',
+            'isSearch' => $isSearch,
+            'msgProduct' => $msg,
         );
         return View::make('product', $data);
     }
@@ -209,7 +249,7 @@ class HomeController extends BaseController {
     
     }
 
-    public function searchproduct(){
+    /*public function searchproduct(){
         // echo 1;
         $content = Input::get("search");
         $lang = $this->checkLanguage(); 
@@ -223,14 +263,6 @@ class HomeController extends BaseController {
             $result = product::distinct('id')->where('name_en','LIKE','%'.$content.'%')->orWhere('mota_en','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);        
         }
 
-        /*if(count($result) > 0){
-            echo $content."----".count($result);
-            var_dump($result);
-            $productList = $result;
-        }
-*/
-            // var_dump($result);
-
         $data = array(
             'title' => $title,
             'productList' => $result,
@@ -238,6 +270,6 @@ class HomeController extends BaseController {
         );
         return View::make('product', $data);
 
-    }
+    }*/
 
 }

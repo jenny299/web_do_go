@@ -167,12 +167,21 @@
             </div>
             <div class="col-md-3">
                 <div class="pull-right">
-                    <div class="header-search-bar">
-                        <label>Search</label>
-                        <input type="text" placeholder="Glasses, Shoes, ect" />
-                        <button><i class="fa fa-search"></i>
-                        </button>
-                    </div>
+                    <form method="get" action="{{Asset('tim-kiem')}}?search=Input::get('search')">
+                        <div class="header-search-bar">
+                            @if(Session::get('locale')=='vn')
+                                <label>Tìm</label>
+                            @elseif(Session::get('locale')=='en') 
+                                <label>Search</label>
+                            @else
+                                <label>Tìm</label>
+                            @endif
+                            
+                                <!-- <input type="text" name="search-content" id="search-content" /> -->
+                                {{ Form::text('search', Input::old('search')) }}
+                                <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

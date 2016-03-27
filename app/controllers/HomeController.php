@@ -172,7 +172,7 @@ class HomeController extends BaseController {
     }
 
     public function products(){
-        $productList = product::paginate(10);
+        $productList = product::paginate(9);
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -207,6 +207,37 @@ class HomeController extends BaseController {
 
         echo "sent";
     
+    }
+
+    public function searchproduct(){
+        // echo 1;
+        $content = Input::get("search");
+        $lang = $this->checkLanguage(); 
+
+        if($lang=="vn"){
+            $title = "Sản phẩm";
+            $result = product::distinct('id')->where('name','LIKE','%'.$content.'%')->orWhere('mota','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
+        }
+        else{
+            $title = "Products";
+            $result = product::distinct('id')->where('name_en','LIKE','%'.$content.'%')->orWhere('mota_en','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);        
+        }
+
+        /*if(count($result) > 0){
+            echo $content."----".count($result);
+            var_dump($result);
+            $productList = $result;
+        }
+*/
+            // var_dump($result);
+
+        $data = array(
+            'title' => $title,
+            'productList' => $result,
+            'menuActive' => '#san-pham',
+        );
+        return View::make('product', $data);
+
     }
 
 }

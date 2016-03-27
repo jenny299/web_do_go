@@ -5,8 +5,9 @@
 
 @section('content')
 @include('left_menu')
-<div class="col-md-6">
-    <div class="row row-wrap" id="masonry">
+<div class="col-md-6" style="margin-top:18px;">
+    <!-- <div>{{$productList->count()}}</div> -->
+    <div class="row row-wrap" id="masonry" >
         @foreach($productList as $p)
           <a class="col-md-4 col-masonry popup-text" href="#product-quick-view-dialog" data-effect="mfp-move-from-top">
              <div class="product-thumb">
@@ -36,7 +37,7 @@
         @endforeach
     </div>
 
-    {{$productList->links()}}
+    {{$productList->appends(Request::get('search'))->links();}}
 </div>
 @include('right_menu')
 @endsection

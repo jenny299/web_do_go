@@ -6759,6 +6759,10 @@ ul.left-menu, .menu-left ul{
 .left-menu li.father > a {
     padding: 0 0 0 10px;
 }
+
+.product-title{
+  height: 34px;
+}
  /* .left-menu ul:not(.main-ul) li.father > a:before {
     background-image: url("../includes/plus_minus_icons.png");
     background-position: 25px center;

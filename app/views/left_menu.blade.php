@@ -1,6 +1,7 @@
 <div class="col-md-3 no-padding-left-right">
     <aside class="sidebar-left left-menu">
-        <h3 class="mb20">Danh muc san pham</h3>
+        @if(Session::get('locale')=='vn')
+        <h3 class="mb20">Danh mục sản phẩm</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
             @foreach($menuList as $menu1)
             <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
@@ -29,53 +30,72 @@
                 @endif
             </li>
             @endforeach
-            <!-- <li class="close-all"><a href="#"><i class="fa fa-calendar"></i>Food & Drink</a>
-                <ul>
-                    <li><a href="#">Fashion</a>
-                         <ul>
-                            <li><a href="#">Fashion213</a>
-                                <ul>
-                                    <li><a href="#">Fashion</a></li>
-                                    <li><a href="#">Fashion</a>
-                                    <li><a href="#">Fashion</a>
-                                    <li><a href="#">Fashion</a>
-                                </ul>
-                            </li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Fashion</a></li>
-                    <li><a href="#">Fashion</a></li>
-                    <li><a href="#">Fashion</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-calendar"></i>Events</a>
-                <ul class="ul-child">
-                    <li><a href="#"><i class="fa fa-umbrella"></i>Fashion</a></li>
-                    <li><a href="#"><i class="fa fa-umbrella"></i>Fashion</a></li>
-                    <li><a href="#"><i class="fa fa-umbrella"></i>Fashion</a></li>
-                    <li><a href="#"><i class="fa fa-umbrella"></i>Fashion</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-female"></i>Beauty</a>
-            </li>
-            <li><a href="#"><i class="fa fa-bolt"></i>Fitness</a>
-            </li>
-            <li><a href="#"><i class="fa fa-headphones"></i>Electronics</a>
-            </li>
-            <li><a href="#"><i class="fa fa-image"></i>Furniture</a>
-            </li>
-            <li><a href="#"><i class="fa fa-umbrella"></i>Fashion</a>
-            </li>
-            <li><a href="#"><i class="fa fa-shopping-cart"></i>Shopping</a>
-            </li>
-            <li><a href="#"><i class="fa fa-home"></i>Home & Graden</a>
-            </li>
-            <li><a href="#"><i class="fa fa-plane"></i>Travel</a>
-            </li> -->
         </ul>
+        @elseif(Session::get('locale')=='en') 
+        <h3 class="mb20">Category List</h3>
+        <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
+            @foreach($menuList as $menu1)
+            <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name_en']}}</a>
+                @if(isset($menu1['menucon']))
+                <ul>
+                    @foreach($menu1['menucon'] as $menu2)
+                    <li><a href="#">{{$menu2['name_en']}}</a>
+                        @if(isset($menu2['menucon1']))
+                        <ul>
+                            @foreach($menu2['menucon1'] as $menu3)
+                            <li><a href="#">{{$menu3['name_en']}}</a>
+                                @if(isset($menu3['menucon2']))
+                                <ul>
+                                    @foreach($menu3['menucon2'] as $menu4)
+                                    <li><a href="#">{{$menu4['name_en']}}</a></li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                            </li>
+                            @endforeach
+                        </ul>
+                        @endif
+                    </li>
+                    @endforeach
+                </ul>
+                @endif
+            </li>
+            @endforeach
+        </ul>
+        @else
+        <h3 class="mb20">Danh mục sản phẩm</h3>
+        <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
+            @foreach($menuList as $menu1)
+            <li><a href="#"><i class="fa  fa-bars"></i>{{$menu1['name']}}</a>
+                @if(isset($menu1['menucon']))
+                <ul>
+                    @foreach($menu1['menucon'] as $menu2)
+                    <li><a href="#">{{$menu2['name']}}</a>
+                        @if(isset($menu2['menucon1']))
+                        <ul>
+                            @foreach($menu2['menucon1'] as $menu3)
+                            <li><a href="#">{{$menu3['name']}}</a>
+                                @if(isset($menu3['menucon2']))
+                                <ul>
+                                    @foreach($menu3['menucon2'] as $menu4)
+                                    <li><a href="#">{{$menu4['name']}}</a></li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                            </li>
+                            @endforeach
+                        </ul>
+                        @endif
+                    </li>
+                    @endforeach
+                </ul>
+                @endif
+            </li>
+            @endforeach
+        </ul>
+        @endif
+       
+            
 
          <div class="sidebar-box">
             <h5>Recent Viewed</h5>

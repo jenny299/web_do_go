@@ -229,6 +229,7 @@ class HomeController extends BaseController {
         $menuMain = menu::where('status','=',1)->get();
         $menuList = $this->getmenu();
         $footer = $this->getFooter();
+        $productList = product::all();
 
         $lang = $this->checkLanguage();
         if($lang=="vn")
@@ -243,7 +244,7 @@ class HomeController extends BaseController {
             'menuActive' => '#san-pham',
             'footer' => $footer,
         );
-        return View::make('staticpage', $data);
+        return View::make('product', $data);
     }
 
      public function sendcontact(){

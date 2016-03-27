@@ -6682,13 +6682,108 @@ li.active{
   background-color: #F2F2F2;
 }
 
-/*  .nav-tabs.nav-stacked.nav-coupon-category{
- -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important;
- box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important; 
- border: 1px solid #e6e6e6;
-} 
+/* ul.ul-child,ul.ul-child ul{
+  padding-left: 20px;
+}
 
-.sidebar-box{
- -webkit-box-shadow: 0 3px 1px rgba(0,0,0,0.15);
- box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+.ul-child li{
+  line-height: 40px;
+  list-style: none;
+}
+
+.ul-child.open, 
+.ul-child.open ul.open,
+.ul-child.open ul.open ul.open{
+  display: block;
+}
+
+.ul-child.open ul{
+  display: none;
+}
+
+.ul-child, 
+.ul-child.open ul,
+.ul-child.open ul.open ul,
+.ul-child.open ul.open ul.open ul{
+  display: none;
+  background: #f2f2f2;
 } */
+
+/* .ul-child li{
+  line-height: 40px;
+  list-style: none;
+}
+
+ul.ul-child,ul.ul-child ul{
+  padding-left: 20px;
+} */
+
+
+.left-menu ul, 
+.left-menu, 
+.left-menu ul li,
+.left-menu ul li:active,
+.left-menu ul li a:active{
+  background: #F2F2F2 !important;
+}
+ul.left-menu, .menu-left ul{
+    list-style: none outside none;
+}
+
+.left-menu ul li ul{
+  margin-left: 0px !important;
+}
+
+.left-menu ul{
+  list-style: none !important;
+}
+
+.left-menu ul li{
+  line-height: 40px;
+}
+.left-menu li a {
+    line-height: 25px;
+}
+.left-menu > ul > li > a {
+    color: #3B4C56;
+    display: block;
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+}
+.left-menu li.father > a {
+    padding: 0 0 0 30px;
+}
+ .left-menu ul:not(.main-ul) li.father > a:before {
+    background-image: url("../includes/plus_minus_icons.png");
+    background-position: 25px center;
+     content: ""; 
+    display: block;
+    height: 21px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    vertical-align: middle;
+    width: 23px;
+} 
+.left-menu li.active-cus > a:before {
+    background-position: 0 center !important;
+}
+.left-menu ul li ul {
+    border-left: 1px solid #D9DADB;
+    display: none;
+    margin: 0 0 0 12px;
+    overflow: hidden;
+    padding: 0 0 0 25px;
+}
+.left-menu ul li ul li {
+    position: relative;
+}
+.left-menu ul li ul li:before {
+    border-bottom: 1px dashed #E2E2E3;
+    content: "";
+    left: -20px;
+    position: absolute;
+    top: 12px;
+    width: 15px;
+}

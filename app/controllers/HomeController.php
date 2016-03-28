@@ -34,32 +34,82 @@ class HomeController extends BaseController {
         return Session::get('locale');
     }
 
+    public function vn_str_filter ($str){
+       $unicode = array(
+
+           'a'=>'á|à|ả|ã|ạ|ă|ắ|ặ|ằ|ẳ|ẵ|â|ấ|ầ|ẩ|ẫ|ậ',
+
+           'd'=>'đ',
+
+           'e'=>'é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ',
+
+           'i'=>'í|ì|ỉ|ĩ|ị',
+
+           'o'=>'ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ',
+
+           'u'=>'ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự',
+
+           'y'=>'ý|ỳ|ỷ|ỹ|ỵ',
+
+           'A'=>'Á|À|Ả|Ã|Ạ|Ă|Ắ|Ặ|Ằ|Ẳ|Ẵ|Â|Ấ|Ầ|Ẩ|Ẫ|Ậ',
+
+           'D'=>'Đ',
+
+           'E'=>'É|È|Ẻ|Ẽ|Ẹ|Ê|Ế|Ề|Ể|Ễ|Ệ',
+
+           'I'=>'Í|Ì|Ỉ|Ĩ|Ị',
+
+           'O'=>'Ó|Ò|Ỏ|Õ|Ọ|Ô|Ố|Ồ|Ổ|Ỗ|Ộ|Ơ|Ớ|Ờ|Ở|Ỡ|Ợ',
+
+           'U'=>'Ú|Ù|Ủ|Ũ|Ụ|Ư|Ứ|Ừ|Ử|Ữ|Ự',
+
+           'Y'=>'Ý|Ỳ|Ỷ|Ỹ|Ỵ',
+
+       );
+
+      foreach($unicode as $nonUnicode=>$uni){
+
+           $str = preg_replace("/($uni)/i", $nonUnicode, $str);
+
+      }
+
+      $str = strtolower($str);
+      $str = str_replace(" ", "-", $str);
+
+       return $str;
+   }
+
     public function getmenu(){
         $menu = array();
 
         $menu_1 = danhmuccha::orderBy('thutu')->get();
         if(count($menu_1) > 0){
             foreach($menu_1 as $m1){
+                $slug = $this->vn_str_filter($m1->name);
+
                 $data = array(
                     'id' => $m1->id,
                     'id_dmcha' => $m1->id_dmcha,
                     'name' => $m1->name,
                     'name_en' => $m1->name_en,
                     'cap' => $m1->cap,
-                    'thutu' => $m1->thutu
+                    'thutu' => $m1->thutu,
+                    'slug' => $slug,
                 );
                 $menu[$m1->id] = $data;
 
                 $menu_2 = dmcon1::where('id_dmcha','=',$m1->id)->orderBy('thutu')->get();
                 if(count($menu_2) > 0){
                     foreach ($menu_2 as $m2) {
+                        $slug2 = $this->vn_str_filter($m2->name);
                         $data2 = array(
                             'id' => $m2->id,
                             'id_dmcha' => $m2->id_dmcha,
                             'name' => $m2->name,
                             'name_en' => $m2->name_en,
                             'cap' => $m2->cap,
-                            'thutu' => $m2->thutu
+                            'thutu' => $m2->thutu,
+                            'slug' => $slug2,
                         );
                         // $menu[$m1->id]['id'] = $data1;
                         $menu[$m1->id]['menucon'][$m2->id]= $data2;
@@ -67,13 +117,15 @@ class HomeController extends BaseController {
 
                         if(count($menu_3) > 0){
                             foreach($menu_3 as $m3){
+                                $slug3 = $this->vn_str_filter($m3->name);
                                 $data3 = array(
                                     'id' => $m3->id,
                                     'id_dmcha' => $m3->id_dmcha,
                                     'name' => $m3->name,
                                     'name_en' => $m3->name_en,
                                     'cap' => $m3->cap,
-                                    'thutu' => $m3->thutu
+                                    'thutu' => $m3->thutu,
+                                    'slug' => $slug3,
                                 );
                                 // $menu[$m1->id]['id'] = $data1;
                                 $menu[$m1->id]['menucon'][$m2->id]['menucon1'][$m3->id]= $data3;
@@ -81,13 +133,15 @@ class HomeController extends BaseController {
 
                                 if(count($menu_4) > 0){
                                     foreach($menu_4 as $m4){
+                                        $slug4 = $this->vn_str_filter($m4->name);
                                         $data4 = array(
                                             'id' => $m4->id,
                                             'id_dmcha' => $m4->id_dmcha,
                                             'name' => $m4->name,
                                             'name_en' => $m4->name_en,
                                             'cap' => $m4->cap,
-                                            'thutu' => $m4->thutu
+                                            'thutu' => $m4->thutu,
+                                            'slug' => $slug4,
                                         );
                                         $menu[$m1->id]['menucon'][$m2->id]['menucon1'][$m3->id]['menucon2'][$m4->id]= $data4;
                                     }
@@ -173,11 +227,14 @@ class HomeController extends BaseController {
 
     public function products(){
         $content = Input::get("search");
+        $name = Input::get("name");
+        $level = Input::get("level");
+        $id = Input::get("id");
         $lang = $this->checkLanguage();
         $isSearch = 0;
         $msg = "";
 
-        if($content!=""){
+        if($content!="" && $name == "" && $level == "" && $id == ""){
             if($lang=="vn"){
                 $title = "Sản phẩm";
                 $productList = product::distinct('id')->where('name','LIKE','%'.$content.'%')->orWhere('mota','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
@@ -198,6 +255,31 @@ class HomeController extends BaseController {
                 
             }
             $isSearch = 1;
+        }
+        else if($content== "" && $name != "" && $level != "" && $id != ""){
+            if($level == 1){
+                $productList = product::where('id_cha','=',$id)->paginate(9)->appends(['name' => $name, 'level' => $level, 'id' => $id]);
+            }
+            else if($level == 2){                
+                $productList = product::where('id_con1','=',$id)->paginate(9)->appends(['name' => $name, 'level' => $level, 'id' => $id]);
+                // var_dump($productList);exit();
+            }
+            else if($level == 3){
+                $productList = product::where('id_con2','=',$id)->paginate(9)->appends(['name' => $name, 'level' => $level, 'id' => $id]);
+            }
+            else{
+                $productList = product::where('id_con3','=',$id)->paginate(9)->appends(['name' => $name, 'level' => $level, 'id' => $id]);
+            }
+
+            if($lang=="vn"){
+                if($productList->getTotal() <= 0)
+                   $msg = "Sản phẩm đang được cập nhật.";
+            }
+            else{
+                if($productList->getTotal() <= 0)
+                   $msg = "Products is being updated.";
+            }
+            $isSearch = 2;
         }
         else{
             $productList = product::paginate(9);
@@ -247,6 +329,55 @@ class HomeController extends BaseController {
 
         echo "sent";
     
+    }
+
+    public function categoryproduct($name_child, $level, $idchild){
+        if(Input::get('name_child') != "")
+            $name_child = Input::get('name_child');
+        if(Input::get('level') != "")
+            $level = Input::get('level');
+        if(Input::get('idchild') != "")
+            $idchild = Input::get('idchild');
+
+        if($level == 1){
+            $productList = product::where('id_cha','=',$idchild)->paginate(9)->appends(['name_child' => $name_child]);
+        }
+        else if($level == 2){
+            $productList = product::where('id_cha','=',$idchild)->paginate(9)->appends(['name_child' => $name_child, 'level' => $level, 'idchild' => $idchild]);
+        }
+        else if($level == 3){
+            $productList = product::where('id_con2','=',$idchild)->appends(array('name_child' => $name_child, 'level' => $level, 'idchild' => $idchild ));
+        }
+        else{
+            $productList = product::where('id_con3','=',$idchild)->appends(array('name_child' => $name_child, 'level' => $level, 'idchild' => $idchild ));
+        }
+
+        $lang = $this->checkLanguage();
+        $msg = "";
+
+        if($lang=="vn"){
+            $title = "Sản phẩm";
+            if($productList->getTotal() > 0)
+                $msg = $productList->getTotal()." sản phẩm được tìm thấy.";
+            else
+                $msg = "Khôg có sản phẩm nào được tìm thấy.";
+        }
+        else{
+            $title = "Products";
+            if($productList->getTotal() > 0)
+                $msg = $productList->getTotal()." products were found.";
+            else
+                $msg = "No products was found.";
+        }
+/*
+        $data = array(
+            'title' => $title,
+            'productList' => $productList,
+            'menuActive' => '#san-pham',
+            'isSearch' => "2",
+            'msgProduct' => $msg,
+        );
+        return View::make('product', $data);*/
     }
 
     /*public function searchproduct(){

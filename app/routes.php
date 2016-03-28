@@ -55,6 +55,7 @@ Route::get('khuyen-mai',array('as' => 'khuyen-mai' , 'uses' =>'HomeController@sa
 Route::get('san-pham',array('as' => 'san-pham' , 'uses' =>'HomeController@products'));
 Route::get('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@contact'));
 Route::post('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@sendcontact'));
+// Route::get('loai-sp/{name_child}/{level}/{idchild}',array('as' => 'loai-sp/{name_child}/{level}/{idchild}' , 'uses' =>'HomeController@categoryproduct'));
 // Route::get('tim-kiem',array('as' => 'tim-kiem' , 'uses' =>'HomeController@searchproduct'));
 
 //admincontroller

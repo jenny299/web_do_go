@@ -47,8 +47,11 @@
     @endif
         
     </div>
-
-    {{$productList->appends(Request::get('search'))->links();}}
+    @if($isSearch == "1")
+        {{$productList->appends(Request::get('search'))->links();}}
+    @else
+        {{$productList->appends(Request::get('name'), Request::get('level'), Request::get('id'))->links();}}
+    @endif
 </div>
 @include('right_menu')
 @endsection

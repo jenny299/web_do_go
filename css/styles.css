@@ -6682,42 +6682,9 @@ li.active{
   background-color: #F2F2F2;
 }
 
-/* ul.ul-child,ul.ul-child ul{
-  padding-left: 20px;
-}
 
-.ul-child li{
-  line-height: 40px;
-  list-style: none;
-}
 
-.ul-child.open, 
-.ul-child.open ul.open,
-.ul-child.open ul.open ul.open{
-  display: block;
-}
-
-.ul-child.open ul{
-  display: none;
-}
-
-.ul-child, 
-.ul-child.open ul,
-.ul-child.open ul.open ul,
-.ul-child.open ul.open ul.open ul{
-  display: none;
-  background: #f2f2f2;
-} */
-
-/* .ul-child li{
-  line-height: 40px;
-  list-style: none;
-}
-
-ul.ul-child,ul.ul-child ul{
-  padding-left: 20px;
-} */
-
+/* ======= MENU ======= */
 
 .left-menu ul, 
 .left-menu, 
@@ -6738,16 +6705,13 @@ ul.left-menu, .menu-left ul{
   list-style: none !important;
 }
 
-.left-menu ul li{
-  line-height: 40px;
+.left-menu ul.main-ul li ul li{
+  /* line-height: 40px; */
+  margin: 10px 0px;
 }
 .left-menu ul li a.first-li:active{
   background: #795433 !important;
   color: #FFF !important;
-}
-
-.left-menu li a {
-    line-height: 25px;
 }
 .left-menu > ul > li > a {
     color: #3B4C56;
@@ -6759,25 +6723,9 @@ ul.left-menu, .menu-left ul{
 .left-menu li.father > a {
     padding: 0 0 0 10px;
 }
-
 .product-title{
   height: 34px;
 }
- /* .left-menu ul:not(.main-ul) li.father > a:before {
-    background-image: url("../includes/plus_minus_icons.png");
-    background-position: 25px center;
-     content: ""; 
-    display: block;
-    height: 21px;
-    left: 0;
-    position: absolute;
-    top: 8px;
-    vertical-align: middle;
-    width: 23px;
- } 
- .left-menu li.active-cus > a:before {
-    background-position: 0 center !important;
- } */
 .left-menu ul li ul {
     border-left: 1px solid #D9DADB;
     display: none;
@@ -6852,4 +6800,19 @@ a.view-all:link{
 
 ul.main-ul li:hover{
   cursor: pointer;
+}
+
+i.i-first{
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  z-index: 1000;
+}
+
+ul.main-ul{
+  position: relative;
+}
+
+ul.main-ul li.active i.i-first{
+  color:#FFF;
 }

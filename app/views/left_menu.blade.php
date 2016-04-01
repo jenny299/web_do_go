@@ -131,36 +131,9 @@
         </div>
 
         <div class="sidebar-box">
-            <h5>Popular</h5>
-            <ul class="thumb-list">
-                <li>
-                    <a href="#">
-                        <img src="img/70x70.png" alt="Image Alternative text" title="Food is Pride" />
-                    </a>
-                    <div class="thumb-list-item-caption">
-                        <h5 class="thumb-list-item-title"><a href="#">Best Pasta</a></h5>
-                        <p class="thumb-list-item-price">$312</p>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/70x70.png" alt="Image Alternative text" title="Old No7" />
-                    </a>
-                    <div class="thumb-list-item-caption">
-                        <h5 class="thumb-list-item-title"><a href="#">Jack Daniels Huge Pack</a></h5>
-                        <p class="thumb-list-item-price">$447</p>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/70x70.png" alt="Image Alternative text" title="The Hidden Power of the Heart" />
-                    </a>
-                    <div class="thumb-list-item-caption">
-                        <h5 class="thumb-list-item-title"><a href="#">Beach Holidays</a></h5>
-                        <p class="thumb-list-item-price">$195</p>
-                    </div>
-                </li>
-            </ul>
+            <h5>Visitors</h5>
+            <img src="{{Asset('img/welcome.png')}}" alt="" style="margin-bottom: 10px">
+<!-- Counter Code START --><a href="http://www.e-zeeinternet.com/" target="_blank"><img src="http://www.e-zeeinternet.com/count.php?page=1142321&style=LED&nbdigits=5" alt="HTML Hit Counter" border="0" ></a><!-- Counter Code END -->
         </div>
 
     </aside>

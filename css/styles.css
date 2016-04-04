@@ -6593,10 +6593,6 @@ footer.main{
   padding-top: 0px !important;
 }
 
-.footer-top-area .footer-custom{
-  height: 100px;
-}
-
 body.boxed footer.main .footer-copyright{
    -webkit-border-radius: 0px !important;
     border-radius: 0px !important;
@@ -6604,18 +6600,28 @@ body.boxed footer.main .footer-copyright{
 }
 
 .wrapper-info{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+
+.footer-custom{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .company-name h2{
   color: #f4d279 !important;
-  line-height: 100px;
+  margin-top: 15px;
+  /*line-height: 100px;*/
 }
 
 .company-info div{
   color: #FFF;
+}
+
+.address-content{
+
 }
 
 .wrapper-slider-show{

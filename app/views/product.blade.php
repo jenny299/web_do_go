@@ -5,15 +5,16 @@
 
 @section('content')
 @include('left_menu')
-<div class="col-md-6">
-    <!-- <div>{{$productList->count()}}</div> -->
-    @if($isSearch == "1" || $productList->getTotal() <= 0)
-        <h3 class="mb20">{{$msgProduct}}</h3>
-    <div class="row row-wrap" id="masonry" style="margin-top:20px">
+<div class="col-md-6">  
 
+    @if($isSearch == "1" || $productList->getTotal() <= 0)
+        <div class="row" style="margin-top:48px; margin-left: 0px">
+        <h3 class="mb20">{{$msgProduct}}</h3>
+    </div>
+    <div class="row row-wrap" id="masonry" style="margin-top: 0px">
     @else
-    <div class="row row-wrap" id="masonry" style="margin-top:48px">
-    @endif
+    <div class="row row-wrap" id="masonry">
+    @endif 
     
     @if($productList->getTotal() > 0)
         @foreach($productList as $p)

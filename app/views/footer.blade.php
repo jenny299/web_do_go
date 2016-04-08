@@ -1,5 +1,5 @@
-<footer class="main">
-    <div class="footer-top-area">
+<footer class="main" style="background: <?php echo $web_config->footer_top; ?> !important;">
+    <div class="footer-top-area" style="background: <?php echo $web_config->footer_top; ?> !important;">
         <div class="container footer-custom">
            <div class="row wrapper-info">
               <!--  <div class="col-md-7 company-name"><h2>CTY CP KIEN LINH VIET NAM</h2></div>
@@ -47,7 +47,7 @@
            </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright" style="background: <?php echo $web_config->footer_bottom; ?> !important;">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

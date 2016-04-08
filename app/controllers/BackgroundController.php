@@ -15,6 +15,10 @@ class BackgroundController extends BaseController {
 		$admin = configsite::find($id);
 		$admin->maunen  = $input['color'];
 		$admin->chon = $input['background'];
+		$admin->menu = $input['color_menu'];
+		$admin->content = $input['color_content'];
+		$admin->footer_top = $input['color_footer_top'];
+		$admin->footer_bottom = $input['color_footer_bottom'];
 
    		$rules = array(
 			'image'   => 'mimes:jpeg,bmp,png'

@@ -54,8 +54,17 @@ App::before(function($request)
     $menuMain = menu::where('status','=',1)->get();
     View::share('menuMain',$menuMain); 
 
-    $background_config = configsite::get()->first();
-    View::share('background_config',$background_config->anhnen); 
+    $web_config = configsite::get()->first();
+    View::share('web_config', $web_config); 
+
+    $background_config = $web_config->anhnen;
+    if($web_config->chon==0){
+	    $background_config = $web_config->maunen;
+    }
+    View::share('background_config', $background_config); 
+
+    $banner = flash::all();
+    View::share('banners_web',$banner); 
 
 });
 

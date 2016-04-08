@@ -34,10 +34,10 @@
 
 
 <!-- <body class="boxed" style="background-image: url(img/textures/wood-1.jpg)"> -->
-<body class="boxed" style="background-image: url(<?php echo $background_config; ?>)">
+<body class="boxed" style="background: url(<?php echo $background_config; ?>)">
 
 
-    <div class="global-wrap">
+    <div class="global-wrap" style="background: <?php echo $web_config->content; ?>">
 
 
         <!-- //////////////////////////////////

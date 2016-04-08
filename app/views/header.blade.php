@@ -20,9 +20,14 @@
     </div>
 </div> -->
 <div class="owl-carousel owl-slider" id="owl-carousel-slider" data-inner-pagination="true" data-white-pagination="true" data-nav="false">
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960" height="300"><param name="movie" value="{{Asset('upload/image/960_300_top.swf')}}"><param name="quality" value="high"><param name="wmode" value="transparent"> <embed src="{{Asset('upload/image/960_300_top.swf')}}" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="300" title="Adobe Flash Player"></object>
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960" height="300">
+        <param name="movie" value="{{Asset($banners_web[0]->flash)}}">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent"> 
+        <embed src="{{Asset($banners_web[0]->flash)}}" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="300" title="Adobe Flash Player">
+    </object>
 </div>
-<header class="main main-color">
+<header class="main main-color" style="background-color: <?php echo $web_config->menu; ?>">
     <div class="container">
         <div class="row">
             <div class="col-md-7">
@@ -179,7 +184,7 @@
                             
                                 <!-- <input type="text" name="search-content" id="search-content" /> -->
                                 {{ Form::text('search', Input::old('search')) }}
-                                <button><i class="fa fa-search"></i></button>
+                                <button style="background: <?php echo $web_config->menu; ?>"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
                 </div>

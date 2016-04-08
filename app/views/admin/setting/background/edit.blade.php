@@ -90,6 +90,20 @@
                                         </label>
                                         <!-- Chọn cách upload video-->
 
+                                        <p><br></p>
+
+                                        Chọn màu menu: <input type="color" name="color_menu" value="{{$back->menu}}">
+                                        <p><br></p>
+
+                                        Chọn màu nền body: <input type="color" name="color_content" value="{{$back->content}}">
+                                        <p><br></p>
+
+                                        Chọn màu top footer: <input type="color" name="color_footer_top" value="{{$back->footer_top}}">
+                                        <p><br></p>
+
+                                        Chọn màu bottom footer: <input type="color" name="color_footer_bottom" value="{{$back->footer_bottom}}">
+                                        <p><br></p>
+
                                     </section>
                                 </div>
 

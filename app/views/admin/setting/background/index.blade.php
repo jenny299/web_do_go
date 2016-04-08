@@ -75,6 +75,10 @@
                                     <th>Image</th>
                                     <th>Color</th>
                                     <th>Show</th>
+                                    <th>Menu</th>
+                                    <th>Content</th>
+                                    <th>Footer Top</th>
+                                    <th>Footer bottom</th>
                                     <th></th>
                                 </tr>
 
@@ -85,6 +89,7 @@
                                         <tr>
                                             <th><img src="{{url($row->anhnen)}}" width="120px" height="120px"></th>
                                             <th><div style="width: 120px; height:120px; background: {{$row->maunen}}; border: 1px #000 solid;"></div></th>
+                                           
                                             <th>
                                                 @if($row->chon == 0)
                                                     Đang chạy chế độ màu nền
@@ -92,6 +97,10 @@
                                                     Đang chạy chế độ ảnh nền
                                                 @endif
                                             </th>
+                                            <th><div style="width: 120px; height:120px; background: {{$row->menu}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 120px; height:120px; background: {{$row->content}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 120px; height:120px; background: {{$row->footer_top}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 120px; height:120px; background: {{$row->footer_bottom}}; border: 1px #000 solid;"></div></th>
                                             <th><a href="#background/edit/{{$row->id}}"><button class="btn btn-xs btn-success">Edit</button></a></th>
                                         </tr>
                                     @endforeach

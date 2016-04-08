@@ -3,6 +3,8 @@
 
 <head>
     <title>@yield('title')</title>
+
+    <link rel="icon" type="image/jpg" href="{{Asset($web_config->icon)}}">
     <!-- meta info -->
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="keywords" content="Koupon HTML5 Template" />

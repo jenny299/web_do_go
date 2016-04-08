@@ -67,9 +67,14 @@
                                 <div class="col col-10">
 
                                     <section>
-
                                         <input type="hidden" name="id" value="{{$back->id}}">
-                                        
+
+                                        Chọn Icon:
+                                        <label class="input" for="">
+                                            <img src="{{url($back->icon)}}" width="40px" height="40px"><p><br></p>
+                                            <input type="file" class="form-control" name="image_logo">
+                                        </label>
+                                        <br>
                                     
                                         Chọn màu nền : <input type="color" name="color" value="{{$back->maunen}}">
                                       

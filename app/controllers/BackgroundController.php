@@ -23,13 +23,21 @@ class BackgroundController extends BaseController {
    		$rules = array(
 			'image'   => 'mimes:jpeg,bmp,png'
 		);
+
+		$rules2 = array(
+			'image_logo'   => 'mimes:jpeg,png'
+		);
    		$validator = Validator::make($input, $rules);
+   		$validator2 = Validator::make($input, $rules2);
 
 		$destinationPath = '';
    		$filename = '';
 
    		if($validator->fails()){
 			return Redirect::to('admin/dashboard#background/edit/'.$id)->withErrors($validator);
+		}
+		else if($validator2->fails()){
+			return Redirect::to('admin/dashboard#background/edit/'.$id)->withErrors($validator2);
 		}
 		else{
 			if (Input::hasFile('image')){
@@ -38,6 +46,15 @@ class BackgroundController extends BaseController {
    	   			$destinationPath = ('upload/image/'.str_random(12).$filename.".jpg");
   	    		Image::make($image->getRealPath())->save($destinationPath);
   	    		$admin->anhnen= $destinationPath;
+  	    	}
+
+  	    	if (Input::hasFile('image_logo')){
+       			$image= Input::file('image_logo');
+  	    		$filename= $image->getClientOriginalName();
+   	   			$destinationPath = ('upload/image/'.str_random(12).$filename.".jpg");
+  	    		Image::make($image->getRealPath())->resize(40, 40)->save($destinationPath);
+  	    		$admin->icon= $destinationPath;
+
   	    	}
 	     	if($admin->save())
 			{

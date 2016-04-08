@@ -8,7 +8,8 @@
 		"intervention/image": "1.6.5",
 		"chumper/datatable": "2.3",
 		"mews/captcha": "dev-master",
-		"jenssegers/agent": "~2.1"
+		"jenssegers/agent": "~2.1",
+		"intervention/image": "dev-master"
 		
 	},
 	"autoload": {

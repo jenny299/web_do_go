@@ -101,7 +101,7 @@
                             <span class="menu-item-parent">Setting</span>
                         </a>
                         <ul>
-                            <li><a href="background">Background</a></li>
+                            <li><a href="background">Config View</a></li>
                             <li><a href="email_config">Config Email</a></li>
                         </ul>
                     </li>

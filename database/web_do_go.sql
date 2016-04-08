@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-04-08 21:43:48
+Date: 2016-04-08 22:26:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,6 +59,7 @@ INSERT INTO `comment` VALUES ('5', '1', 'egdfef', '1', '1', '2016-03-12 11:20:46
 DROP TABLE IF EXISTS `config`;
 CREATE TABLE `config` (
   `id` int(11) NOT NULL,
+  `icon` varchar(100) NOT NULL,
   `maunen` varchar(20) NOT NULL,
   `anhnen` varchar(100) NOT NULL,
   `chon` int(11) NOT NULL,
@@ -75,7 +76,7 @@ CREATE TABLE `config` (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO `config` VALUES ('1', '#e80074', 'img/textures/wood-1.jpg', '1', '#795433', '#f2f2f2', '#795433', '\r\n#493b2e', 'vohuuloc59@gmail.com', '2016-04-08 21:29:41', '2016-04-08 14:28:59');
+INSERT INTO `config` VALUES ('1', 'upload/image/p4tsYOWesKYLd.jpg.jpg', '#e80074', 'img/textures/wood-1.jpg', '1', '#795433', '#f2f2f2', '#795433', '#000000', 'vohuuloc59@gmail.com', '2016-04-08 22:25:52', '2016-04-08 15:25:52');
 
 -- ----------------------------
 -- Table structure for contact

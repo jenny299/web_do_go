@@ -125,6 +125,7 @@ return array(
 		'Jenssegers\Agent\AgentServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'Mews\Captcha\CaptchaServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 	),
 
@@ -196,6 +197,7 @@ return array(
 		'Agent'            => 'Jenssegers\Agent\Facades\Agent',
 		'Image' => 'Intervention\Image\Facades\Image',
 		'Captcha' => 'Mews\Captcha\Facades\Captcha',
+		'Image' => 'Intervention\Image\Facades\Image',
 	),
 
 );

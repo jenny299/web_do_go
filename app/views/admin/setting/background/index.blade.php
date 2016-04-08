@@ -72,6 +72,7 @@
                                 <thead>
 
                                 <tr>
+                                    <th>Icon</th>
                                     <th>Image</th>
                                     <th>Color</th>
                                     <th>Show</th>
@@ -87,8 +88,9 @@
                                 <tbody>
                                     @foreach($back as $row)
                                         <tr>
-                                            <th><img src="{{url($row->anhnen)}}" width="120px" height="120px"></th>
-                                            <th><div style="width: 120px; height:120px; background: {{$row->maunen}}; border: 1px #000 solid;"></div></th>
+                                            <th><img src="{{url($row->icon)}}" width="80px" height="80px"></th>
+                                            <th><img src="{{url($row->anhnen)}}" width="80px" height="80px"></th>
+                                            <th><div style="width: 80px; height:80px; background: {{$row->maunen}}; border: 1px #000 solid;"></div></th>
                                            
                                             <th>
                                                 @if($row->chon == 0)
@@ -97,10 +99,10 @@
                                                     Đang chạy chế độ ảnh nền
                                                 @endif
                                             </th>
-                                            <th><div style="width: 120px; height:120px; background: {{$row->menu}}; border: 1px #000 solid;"></div></th>
-                                            <th><div style="width: 120px; height:120px; background: {{$row->content}}; border: 1px #000 solid;"></div></th>
-                                            <th><div style="width: 120px; height:120px; background: {{$row->footer_top}}; border: 1px #000 solid;"></div></th>
-                                            <th><div style="width: 120px; height:120px; background: {{$row->footer_bottom}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 80px; height:80px; background: {{$row->menu}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 80px; height:80px; background: {{$row->content}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 80px; height:80px; background: {{$row->footer_top}}; border: 1px #000 solid;"></div></th>
+                                            <th><div style="width: 80px; height:80px; background: {{$row->footer_bottom}}; border: 1px #000 solid;"></div></th>
                                             <th><a href="#background/edit/{{$row->id}}"><button class="btn btn-xs btn-success">Edit</button></a></th>
                                         </tr>
                                     @endforeach

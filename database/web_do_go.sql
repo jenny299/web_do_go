@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-04-02 00:13:46
+Date: 2016-04-08 21:43:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,6 +62,10 @@ CREATE TABLE `config` (
   `maunen` varchar(20) NOT NULL,
   `anhnen` varchar(100) NOT NULL,
   `chon` int(11) NOT NULL,
+  `menu` varchar(20) NOT NULL,
+  `content` varchar(20) NOT NULL,
+  `footer_top` varchar(20) NOT NULL,
+  `footer_bottom` varchar(20) NOT NULL,
   `email` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -71,7 +75,7 @@ CREATE TABLE `config` (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO `config` VALUES ('1', '#e80074', 'img/textures/wood-1.jpg', '1', 'vohuuloc59@gmail.com', '2016-03-27 13:34:35', '2016-03-10 04:52:16');
+INSERT INTO `config` VALUES ('1', '#e80074', 'img/textures/wood-1.jpg', '1', '#795433', '#f2f2f2', '#795433', '\r\n#493b2e', 'vohuuloc59@gmail.com', '2016-04-08 21:29:41', '2016-04-08 14:28:59');
 
 -- ----------------------------
 -- Table structure for contact
@@ -213,13 +217,15 @@ CREATE TABLE `flash` (
   `flash` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `position_banner` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of flash
 -- ----------------------------
-INSERT INTO `flash` VALUES ('1', 'upload/image/thuattoan.pdf', '2016-03-14 16:51:44', '2016-03-14 09:51:44');
+INSERT INTO `flash` VALUES ('1', 'upload/image/960_300_top.swf', '2016-04-08 19:13:50', '2016-03-14 09:51:44', 'Top');
+INSERT INTO `flash` VALUES ('2', 'upload/image/slider_img.swf', '2016-04-08 19:13:56', '0000-00-00 00:00:00', 'Home');
 
 -- ----------------------------
 -- Table structure for menu

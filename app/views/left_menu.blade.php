@@ -1,4 +1,4 @@
-<div class="col-md-3 no-padding-left-right">
+<div class="col-md-3 no-padding-left-right left-menu-custom">
     <aside class="sidebar-left left-menu">
         @if(Session::get('locale')=='vn')
         <h3 class="mb20">Danh mục sản phẩm</h3>

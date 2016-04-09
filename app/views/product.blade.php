@@ -13,7 +13,7 @@
     </div>
     <div class="row row-wrap" id="masonry" style="margin-top: 0px">
     @else
-    <div class="row row-wrap" id="masonry">
+    <div class="row row-wrap" id="masonry" style="margin-top: 48px">
     @endif 
     
     @if($productList->getTotal() > 0)

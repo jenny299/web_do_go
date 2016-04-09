@@ -6826,3 +6826,33 @@ ul.main-ul{
 ul.main-ul li.active i.i-first{
   color:#FFF;
 }
+
+/* MAKE VIEW NO MARGIN LEFT RIGHT */
+
+@media (min-width: 1200px)
+.main-content-cus.container {
+    width: 1230px !important;
+}
+@media (min-width: 992px)
+.main-content-cus.container {
+    width: 1030px !important;
+}
+@media (min-width: 768px)
+.main-content-cus.container{
+    width: 810px !important;
+}
+
+.main-content-cus{
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.left-menu-custom{
+
+}
+
+.right-menu-custom{
+
+}

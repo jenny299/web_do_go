@@ -63,7 +63,7 @@
 
 
 
-        <div class="container">
+        <div class="main-content-cus container ">
             <div class="gap gap-small"></div>
                 <div class="row">
 

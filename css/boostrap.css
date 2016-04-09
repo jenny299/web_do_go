@@ -752,6 +752,22 @@ pre code {
     width: 1170px;
   }
 }
+
+@media (min-width: 768px) {
+  .main-content-cus.container {
+    width: 810px;
+  }
+}
+@media (min-width: 992px) {
+  .main-content-cus.container {
+    width: 1030px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content-cus.container {
+    width: 1230px;
+  }
+}
 .container-fluid {
   margin-right: auto;
   margin-left: auto;

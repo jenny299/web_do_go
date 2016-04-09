@@ -130,7 +130,7 @@
             </ul>
         </div>
 
-        <div class="sidebar-box">
+        <div class="sidebar-box visitor-web">
             <h5>Visitors</h5>
             <img src="{{Asset('img/welcome.png')}}" alt="" style="margin-bottom: 10px">
 <!-- Counter Code START --><a href="http://www.e-zeeinternet.com/" target="_blank"><img src="http://www.e-zeeinternet.com/count.php?page=1142321&style=LED&nbdigits=5" alt="HTML Hit Counter" border="0" ></a><!-- Counter Code END -->

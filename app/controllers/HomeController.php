@@ -75,6 +75,7 @@ class HomeController extends BaseController {
 
       $str = strtolower($str);
       $str = str_replace(" ", "-", $str);
+      $str = str_replace(".", "-", $str);
 
        return $str;
    }
@@ -96,6 +97,7 @@ class HomeController extends BaseController {
                     'thutu' => $m1->thutu,
                     'slug' => $slug,
                 );
+
                 $menu[$m1->id] = $data;
 
                 $menu_2 = dmcon1::where('id_dmcha','=',$m1->id)->orderBy('thutu')->get();
@@ -111,6 +113,7 @@ class HomeController extends BaseController {
                             'thutu' => $m2->thutu,
                             'slug' => $slug2,
                         );
+
                         // $menu[$m1->id]['id'] = $data1;
                         $menu[$m1->id]['menucon'][$m2->id]= $data2;
                         $menu_3 = dmcon2::where('id_dmcon1','=',$m2->id)->orderBy('thutu')->get();

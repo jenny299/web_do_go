@@ -83,19 +83,19 @@
                             <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title_en}}</a>
                                 <ul>
                                 @foreach($menuList as $menu1)
-                                <li><a href="#">{{$menu1['name_en']}}</a>
+                                <li><a href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name_en']}}</a>
                                     @if(isset($menu1['menucon']))
                                     <ul>
                                         @foreach($menu1['menucon'] as $menu2)
-                                        <li><a href="#">{{$menu2['name_en']}}</a>
+                                        <li><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}">{{$menu2['name_en']}}</a>
                                             @if(isset($menu2['menucon1']))
                                             <ul>
                                                 @foreach($menu2['menucon1'] as $menu3)
-                                                <li><a href="#">{{$menu3['name_en']}}</a>
+                                                <li><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}">{{$menu3['name_en']}}</a>
                                                     @if(isset($menu3['menucon2']))
                                                     <ul>
                                                         @foreach($menu3['menucon2'] as $menu4)
-                                                        <li><a href="#">{{$menu4['name_en']}}</a></li>
+                                                        <li><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}">{{$menu4['name_en']}}</a></li>
                                                         @endforeach
                                                     </ul>
                                                     @endif
@@ -112,7 +112,7 @@
                                 </ul>
                             </li>
                             @else
-                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title_en}}</a></li>
+                            <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a></li>
                             @endif
                         @endforeach
                     </ul>
@@ -126,19 +126,19 @@
                             <li id="{{$mm->link}}"><a href="{{Asset($mm->link)}}">{{$mm->title}}</a>
                                 <ul>
                                 @foreach($menuList as $menu1)
-                                <li><a href="#">{{$menu1['name']}}</a>
+                                <li><a href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name']}}</a>
                                     @if(isset($menu1['menucon']))
                                     <ul>
                                         @foreach($menu1['menucon'] as $menu2)
-                                        <li><a href="#">{{$menu2['name']}}</a>
+                                        <li><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}">{{$menu2['name']}}</a>
                                             @if(isset($menu2['menucon1']))
                                             <ul>
                                                 @foreach($menu2['menucon1'] as $menu3)
-                                                <li><a href="#">{{$menu3['name']}}</a>
+                                                <li><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}">{{$menu3['name']}}</a>
                                                     @if(isset($menu3['menucon2']))
                                                     <ul>
                                                         @foreach($menu3['menucon2'] as $menu4)
-                                                        <li><a href="#">{{$menu4['name']}}</a></li>
+                                                        <li><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}">{{$menu4['name']}}</a></li>
                                                         @endforeach
                                                     </ul>
                                                     @endif

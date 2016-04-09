@@ -4,19 +4,19 @@
         <h3 class="mb20">Danh mục sản phẩm</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
             @foreach($menuList as $menu1)
-            <li id="menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name']}}</a>
+            <li id="left-menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" id="left-{{$menu1['slug']}}" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name']}}</a>
                 @if(isset($menu1['menucon']))
-                <ul id="menu-child-1">
+                <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}">{{$menu2['name']}}</a>
+                    <li class="child-fisrt-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}" id="left-{{$menu2['slug']}}">{{$menu2['name']}}</a>
                         @if(isset($menu2['menucon1']))
                         <ul id="menu-child-2">
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}">{{$menu3['name']}}</a>
+                            <li class="child-sencond-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}" id="left-{{$menu3['slug']}}">{{$menu3['name']}}</a>
                                 @if(isset($menu3['menucon2']))
                                 <ul id="menu-child-3">
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}">{{$menu4['name']}}</a></li>
+                                    <li class="child-third-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}" id="left-{{$menu4['slug']}}">{{$menu4['name']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -34,20 +34,20 @@
         @elseif(Session::get('locale')=='en') 
         <h3 class="mb20">Category List</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
-             @foreach($menuList as $menu1)
-            <li id="menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name_en']}}</a>
+            @foreach($menuList as $menu1)
+            <li id="left-menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" id="left-{{$menu1['slug']}}" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name_en']}}</a>
                 @if(isset($menu1['menucon']))
                 <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}">{{$menu2['name_en']}}</a>
+                    <li class="child-fisrt-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}" id="left-{{$menu2['slug']}}">{{$menu2['name_en']}}</a>
                         @if(isset($menu2['menucon1']))
-                        <ul>
+                        <ul id="menu-child-2">
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}">{{$menu3['name_en']}}</a>
+                            <li class="child-sencond-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}" id="left-{{$menu3['slug']}}">{{$menu3['name_en']}}</a>
                                 @if(isset($menu3['menucon2']))
-                                <ul>
+                                <ul id="menu-child-3">
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}">{{$menu4['name_en']}}</a></li>
+                                    <li class="child-third-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}" id="left-{{$menu4['slug']}}">{{$menu4['name_en']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -66,19 +66,19 @@
         <h3 class="mb20">Danh mục sản phẩm</h3>
         <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left main-ul">
             @foreach($menuList as $menu1)
-            <li id="menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name']}}</a>
+            <li id="left-menu-{{$menu1['id']}}"><i class="fa i-first"></i><a class="first-li" id="left-{{$menu1['slug']}}" href="{{Asset('/san-pham')}}?name={{$menu1['slug']}}&level={{$menu1['cap']}}&id={{$menu1['id']}}">{{$menu1['name']}}</a>
                 @if(isset($menu1['menucon']))
                 <ul>
                     @foreach($menu1['menucon'] as $menu2)
-                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}">{{$menu2['name']}}</a>
+                    <li class="child-fisrt-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu2['slug']}}&level={{$menu2['cap']}}&id={{$menu2['id']}}" id="left-{{$menu2['slug']}}">{{$menu2['name']}}</a>
                         @if(isset($menu2['menucon1']))
-                        <ul>
+                        <ul id="menu-child-2">
                             @foreach($menu2['menucon1'] as $menu3)
-                            <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}">{{$menu3['name']}}</a>
+                            <li class="child-sencond-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu3['slug']}}&level={{$menu3['cap']}}&id={{$menu3['id']}}" id="left-{{$menu3['slug']}}">{{$menu3['name']}}</a>
                                 @if(isset($menu3['menucon2']))
-                                <ul>
+                                <ul id="menu-child-3">
                                     @foreach($menu3['menucon2'] as $menu4)
-                                    <li><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}">{{$menu4['name']}}</a></li>
+                                    <li class="child-third-menu-{{$menu1['id']}}"><i></i><a href="{{Asset('/san-pham')}}?name={{$menu4['slug']}}&level={{$menu4['cap']}}&id={{$menu4['id']}}" id="left-{{$menu4['slug']}}">{{$menu4['name']}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif
@@ -141,20 +141,6 @@
 
 </div>
 <script>
-    /*$(document).ready(function(){
-        $("ul.left-menu li").on("click", function(){
-            if($(this).children("ul").hasClass("open")){
-                $(this).children("ul").removeClass("open");
-            }else{
-                $(this).children("ul").addClass("open");
-            }
-            // alert(1);
-            // $("ul.left-menu li ul").removeClass("open");
-
-
-        });
-    });*/
-
     $( document ).ready( function( ) {
         $( '.left-menu li' ).each( function() {
             if( $( this ).children( 'ul' ).length > 0 ) {
@@ -164,37 +150,24 @@
         });
 
         if (localStorage.getItem("current_active") !== "undefined") {
-            // alert(1 + localStorage.getItem("current_active"));
-            var set_active = "ul.main-ul li#" + localStorage.getItem("current_active");
-            $(set_active).addClass("active");
+            var current = localStorage.getItem("current_active");
+            $("#"+current + ":not('.first-li')").css("color","red");
+            $("#"+current).parents('ul').css("display","block");
+            $("#" + current).parents("li").addClass("active");
+            $("#" + current).parent("li").children('i').addClass("no-open");
 
-            if( $( set_active ).children( 'ul' ).length > 0 ) {
-                $( set_active ).children( 'ul' ).slideToggle( 'fast' );     
-            }
+
+            $($("#" + current).parents("li")).each( function() {
+                if( $( this ).children( 'i' ).length > 0 ) {
+                    if($(this).children("i:not(.no-open)").hasClass('fa-plus-square')){
+                         $(this).children("i").removeClass( 'fa-plus-square' );
+                         $(this).children("i").addClass( 'fa-minus-square' );
+                    }
+                }
+            });
         }
-        else{
-            // alert($("ul.main-ul li").first().attr('id'));
-            $("ul.main-ul li").first().addClass("active");
-            // $("ul.main-ul li:first-child").addClass("active");
-        }
-
-        $( '.left-menu li > a.first-li' ).click( function( ) {
-            // alert($(this).parent("li").attr("id"));
-            localStorage.setItem("current_active", $(this).parent("li").attr("id"));
-        });
-
-        $( ".left-menu li > a:not('.first-li')" ).click( function( ) {
-            // alert($(this).parent("li").attr("id"));
-            localStorage.setItem("current_active", $("ul.main-ul li.active").attr("id"));
-            // localStorage.setItem("current_active", $("ul.main-ul li.active").attr("id"));
-        });
 
         $( '.left-menu li.father > i' ).click( function( ) {
-            if($("ul.main-ul li").hasClass("active")){
-                // alert($(this).parent("li").attr("id"));
-                localStorage.setItem("current_active", $(this).parent("li").attr("id"));
-            }
-
             $( this ).parent().children( 'ul' ).slideToggle( 'fast' );
 
             if($( this).hasClass('fa-plus-square')){
@@ -206,6 +179,11 @@
                 $( this ).addClass( 'fa-plus-square' );
             }
         });
+
+        $( '.left-menu li a' ).click( function( ) {
+            // alert($(this).attr("id"));
+            localStorage.setItem("current_active", $(this).attr("id"));
+        }); 
      
     });
 </script>

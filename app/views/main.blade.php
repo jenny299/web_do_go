@@ -65,7 +65,7 @@
 
         <div class="main-content-cus container ">
             <div class="gap gap-small"></div>
-                <div class="row">
+                <div class="row" style="margin-left: 0px; margin-right: 0px">
 
                     @yield('content')
                     

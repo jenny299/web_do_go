@@ -5,7 +5,7 @@
 
 @section('content')
 @include('left_menu')
-<div class="col-md-6">  
+<div class="content-home col-md-6">  
 
     @if($isSearch == "1" || $productList->getTotal() <= 0)
         <div class="row" style="margin-top:48px; margin-left: 0px">

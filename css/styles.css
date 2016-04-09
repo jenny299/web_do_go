@@ -1281,7 +1281,7 @@ label {
   transition: 0.2s;
   height: 40px;
   line-height: 40px;
-  padding: 0px 0px 0px 55px;
+  padding: 0px 0px 0px 35px;
   position: relative;
   margin: 0;
   color: #666;
@@ -6847,12 +6847,4 @@ ul.main-ul li.active i.i-first{
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
-}
-
-.left-menu-custom{
-
-}
-
-.right-menu-custom{
-
 }

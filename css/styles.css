@@ -1365,10 +1365,14 @@ label {
   -ms-filter: none;
   filter: none;
 }
-.nav-tabs.nav-stacked.nav-coupon-category > .active > a:hover {
-  background: #795433;
-  color: #fff;
-  padding-left: 55px;
+/*  .nav-tabs.nav-stacked.nav-coupon-category > .active > a:hover {
+ background: #795433;
+ color: #fff;
+ padding-left: 55px;
+}  */
+
+.nav-tabs.nav-stacked.nav-coupon-category > .active > i{
+  color: #000;
 }
 .nav-tabs.nav-stacked.nav-coupon-category > .active > a:hover span {
   background: rgba(0,0,0,0.5);
@@ -1380,7 +1384,7 @@ label {
   width: 28px;
   top: 6px;
   right: -15px;
-  background: #795433;
+  /* background: #795433; */
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -6715,10 +6719,10 @@ ul.left-menu, .menu-left ul{
   /* line-height: 40px; */
   margin: 10px 0px;
 }
-.left-menu ul li a.first-li:active{
+/* .left-menu ul li a.first-li:active{
   background: #795433 !important;
   color: #FFF !important;
-}
+} */
 .left-menu > ul > li > a {
     color: #3B4C56;
     display: block;

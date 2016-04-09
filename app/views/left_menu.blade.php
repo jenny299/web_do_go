@@ -152,6 +152,8 @@
         if (localStorage.getItem("current_active") !== "undefined") {
             var current = localStorage.getItem("current_active");
             $("#"+current + ":not('.first-li')").css("color","red");
+            $("#"+current + ".first-li").css("background","<?php echo $web_config->menu; ?>");
+            $("#"+current + ":before").css("background","<?php echo $web_config->menu; ?>");
             $("#"+current).parents('ul').css("display","block");
             $("#" + current).parents("li").addClass("active");
             $("#" + current).parent("li").children('i').addClass("no-open");

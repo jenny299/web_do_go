@@ -186,6 +186,6 @@
             // alert($(this).attr("id"));
             localStorage.setItem("current_active", $(this).attr("id"));
         }); 
-     
+
     });
 </script>

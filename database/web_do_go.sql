@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-04-08 22:26:56
+Date: 2016-04-24 23:59:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,31 @@ CREATE TABLE `about` (
 -- Records of about
 -- ----------------------------
 INSERT INTO `about` VALUES ('1', '<p style=\"line-height: 20.8px;\">Từ xưa con người đ&atilde; biết sử dụng gỗ để l&agrave;m c&aacute;c sản phẩm trang tr&iacute; nội, ngoại thất do vậy m&agrave; gỗ đ&atilde; trở n&ecirc;n th&ocirc;ng dụng v&agrave; th&acirc;n thiết với con người. Gỗ được nhiều người lựa chọn kh&ocirc;ng chỉ bởi t&iacute;nh bền, đẹp, dễ sử dụng m&agrave; c&ograve;n v&igrave; chất lượng v&agrave; gi&aacute; cả rất ph&ugrave; hợp.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nHiểu được những ưu thế, những tiện &iacute;ch m&agrave; gỗ mang lại cho con người, bằng tất cả sự tận t&acirc;m v&agrave; khả năng chuy&ecirc;n nghiệp của m&igrave;nh CTY CP KI&Ecirc;N LINH VIỆT NAM đ&atilde; được th&agrave;nh lập v&agrave; ph&aacute;t triển trong phương hướng hoạt động ch&uacute;ng t&ocirc;i kh&ocirc;ng ngừng học hỏi kinh nghiệm, nắm bắt nhu cầu của thị trường để mang đến những sản phẩm tốt nhất cho người ti&ecirc;u d&ugrave;ng.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nKhi lựa chọn đến Ki&ecirc;n Linh xin qu&yacute; kh&aacute;ch h&agrave;ng y&ecirc;n t&acirc;m v&igrave; ch&uacute;ng t&ocirc;i lu&ocirc;n cung cấp những sản phẩm đảm bảo chất lượng v&agrave; uy t&iacute;n với kh&aacute;ch h&agrave;ng; với sự đa dạng về mẫu m&atilde;, chủng loại, kiểu d&aacute;ng phong ph&uacute; được sản xuất, thiết kế từ nguy&ecirc;n vật liệu cao cấp, ngoại nhập đặc biệt c&aacute;c sản phẩm của Ki&ecirc;n Linh sẽ lu&ocirc;n đảm bảo ph&ugrave; hợp cho mọi loại h&igrave;nh kiến tr&uacute;c từ cổ điển đến hiện đại.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nTrong những năm qua c&aacute;c sản phẩm do Ki&ecirc;n Linh cung cấp đ&atilde; được thi c&ocirc;ng, lắp đặt trong nhiều c&ocirc;ng tr&igrave;nh trang tr&iacute; nội thất cho c&aacute;c chung cư, cao ốc văn ph&ograve;ng, kh&aacute;ch sạn, showroom, biệt thự&hellip; với chất lượng kỹ thuật v&agrave; tr&igrave;nh độ thẩm mỹ cao mang t&iacute;nh chuy&ecirc;n nghiệp, hiện đại v&agrave; hiện tại những c&ocirc;ng tr&igrave;nh đ&oacute; đ&atilde; v&agrave; đang mang lại rất nhiều tiện &iacute;ch cho con người. Từ những th&agrave;nh c&ocirc;ng đ&oacute; Ki&ecirc;n Linh nhận thấy rằng phải lu&ocirc;n đổi mới phương thức phục vụ, nắm bắt xu hướng ph&aacute;t triển của x&atilde; hội để đề ra những ch&iacute;nh s&aacute;ch ph&aacute;t triển ti&ecirc;n phong, vượt trội tất cả nhằm mục ti&ecirc;u cuối c&ugrave;ng l&agrave; để phục vụ qu&yacute; kh&aacute;ch h&agrave;ng ng&agrave;y một tốt hơn.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nH&atilde;y để Ki&ecirc;n Linh mang tới vẻ đẹp sang trọng, lịch sự v&agrave; thật sự tiện nghi cho ng&ocirc;i nh&agrave; của qu&yacute; kh&aacute;ch.</p>\r\n', '<p style=\"line-height: 20.8px;\">Từ xưa con người đ&atilde; biết sử dụng gỗ để l&agrave;m c&aacute;c sản phẩm trang tr&iacute; nội, ngoại thất do vậy m&agrave; gỗ đ&atilde; trở n&ecirc;n th&ocirc;ng dụng v&agrave; th&acirc;n thiết với con người. Gỗ được nhiều người lựa chọn kh&ocirc;ng chỉ bởi t&iacute;nh bền, đẹp, dễ sử dụng m&agrave; c&ograve;n v&igrave; chất lượng v&agrave; gi&aacute; cả rất ph&ugrave; hợp.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nHiểu được những ưu thế, những tiện &iacute;ch m&agrave; gỗ mang lại cho con người, bằng tất cả sự tận t&acirc;m v&agrave; khả năng chuy&ecirc;n nghiệp của m&igrave;nh CTY CP KI&Ecirc;N LINH VIỆT NAM đ&atilde; được th&agrave;nh lập v&agrave; ph&aacute;t triển trong phương hướng hoạt động ch&uacute;ng t&ocirc;i kh&ocirc;ng ngừng học hỏi kinh nghiệm, nắm bắt nhu cầu của thị trường để mang đến những sản phẩm tốt nhất cho người ti&ecirc;u d&ugrave;ng.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nKhi lựa chọn đến Ki&ecirc;n Linh xin qu&yacute; kh&aacute;ch h&agrave;ng y&ecirc;n t&acirc;m v&igrave; ch&uacute;ng t&ocirc;i lu&ocirc;n cung cấp những sản phẩm đảm bảo chất lượng v&agrave; uy t&iacute;n với kh&aacute;ch h&agrave;ng; với sự đa dạng về mẫu m&atilde;, chủng loại, kiểu d&aacute;ng phong ph&uacute; được sản xuất, thiết kế từ nguy&ecirc;n vật liệu cao cấp, ngoại nhập đặc biệt c&aacute;c sản phẩm của Ki&ecirc;n Linh sẽ lu&ocirc;n đảm bảo ph&ugrave; hợp cho mọi loại h&igrave;nh kiến tr&uacute;c từ cổ điển đến hiện đại.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nTrong những năm qua c&aacute;c sản phẩm do Ki&ecirc;n Linh cung cấp đ&atilde; được thi c&ocirc;ng, lắp đặt trong nhiều c&ocirc;ng tr&igrave;nh trang tr&iacute; nội thất cho c&aacute;c chung cư, cao ốc văn ph&ograve;ng, kh&aacute;ch sạn, showroom, biệt thự&hellip; với chất lượng kỹ thuật v&agrave; tr&igrave;nh độ thẩm mỹ cao mang t&iacute;nh chuy&ecirc;n nghiệp, hiện đại v&agrave; hiện tại những c&ocirc;ng tr&igrave;nh đ&oacute; đ&atilde; v&agrave; đang mang lại rất nhiều tiện &iacute;ch cho con người. Từ những th&agrave;nh c&ocirc;ng đ&oacute; Ki&ecirc;n Linh nhận thấy rằng phải lu&ocirc;n đổi mới phương thức phục vụ, nắm bắt xu hướng ph&aacute;t triển của x&atilde; hội để đề ra những ch&iacute;nh s&aacute;ch ph&aacute;t triển ti&ecirc;n phong, vượt trội tất cả nhằm mục ti&ecirc;u cuối c&ugrave;ng l&agrave; để phục vụ qu&yacute; kh&aacute;ch h&agrave;ng ng&agrave;y một tốt hơn.&nbsp;</p>\r\n\r\n<p style=\"line-height: 20.8px;\"><br />\r\nH&atilde;y để Ki&ecirc;n Linh mang tới vẻ đẹp sang trọng, lịch sự v&agrave; thật sự tiện nghi cho ng&ocirc;i nh&agrave; của qu&yacute; kh&aacute;ch.</p>\r\n', '2016-03-26 11:49:37', '2016-03-12 02:46:01');
+
+-- ----------------------------
+-- Table structure for color
+-- ----------------------------
+DROP TABLE IF EXISTS `color`;
+CREATE TABLE `color` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `name_en` varchar(255) NOT NULL,
+  `code` varchar(255) DEFAULT NULL,
+  `desc` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of color
+-- ----------------------------
+INSERT INTO `color` VALUES ('2', 'Đen 1', 'Black', '#000000', null, '2016-04-24 22:46:56', '2016-04-24 15:46:56');
+INSERT INTO `color` VALUES ('4', 'Vàng', 'Yellow', '#F4F404', null, null, null);
+INSERT INTO `color` VALUES ('5', 'Xanh lá', 'Green', '#4DE539', null, null, null);
+INSERT INTO `color` VALUES ('6', 'Xanh dương', 'Blue', '#12EAAE', null, null, null);
+INSERT INTO `color` VALUES ('7', 'Tím', 'Violet', '#5809EA', null, null, null);
+INSERT INTO `color` VALUES ('8', 'Đỏ', 'Red', '#F71C11', null, null, null);
 
 -- ----------------------------
 -- Table structure for comment
@@ -76,7 +101,7 @@ CREATE TABLE `config` (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO `config` VALUES ('1', 'upload/image/p4tsYOWesKYLd.jpg.jpg', '#e80074', 'img/textures/wood-1.jpg', '1', '#795433', '#f2f2f2', '#795433', '#000000', 'vohuuloc59@gmail.com', '2016-04-08 22:25:52', '2016-04-08 15:25:52');
+INSERT INTO `config` VALUES ('1', 'upload/image/p4tsYOWesKYLd.jpg.jpg', '#e80074', 'img/textures/wood-1.jpg', '1', '#795433', '#f2f2f2', '#795433', '#000000', 'vohuuloc59@gmail.com', '2016-04-09 13:40:36', '2016-04-08 15:25:52');
 
 -- ----------------------------
 -- Table structure for contact
@@ -202,7 +227,6 @@ CREATE TABLE `danhmuc_con3` (
 -- ----------------------------
 -- Records of danhmuc_con3
 -- ----------------------------
-INSERT INTO `danhmuc_con3` VALUES ('1', '1', 'A 1 CAP 4 1', 'A CAP 4 1', '4', '1', '2016-03-25 23:35:44', '2016-03-14 06:21:26');
 INSERT INTO `danhmuc_con3` VALUES ('2', '1', 'A 1 CAP 4 2', 'A CAP 4 2', '4', '2', '2016-03-25 23:35:51', '0000-00-00 00:00:00');
 INSERT INTO `danhmuc_con3` VALUES ('3', '2', 'A 2 CAP 4 1', 'A 2 CAP 4 1', '4', '1', '2016-03-25 23:36:11', '0000-00-00 00:00:00');
 INSERT INTO `danhmuc_con3` VALUES ('4', '3', 'B 1 CAP 41', 'B 1 CAP 4 1', '4', '1', '2016-03-25 23:36:28', '0000-00-00 00:00:00');
@@ -247,11 +271,35 @@ CREATE TABLE `menu` (
 -- Records of menu
 -- ----------------------------
 INSERT INTO `menu` VALUES ('1', 'Trang Chủ', 'Home', '0000-00-00 00:00:00', '2016-03-12 03:04:35', 'trang-chu', '1');
-INSERT INTO `menu` VALUES ('2', 'Giới Thiệu', 'About Us', '0000-00-00 00:00:00', '2016-03-12 03:04:45', 'gioi-thieu', '1');
-INSERT INTO `menu` VALUES ('3', 'Dịch Vụ', 'Services', '0000-00-00 00:00:00', '2016-03-12 03:04:52', 'dich-vu', '1');
+INSERT INTO `menu` VALUES ('2', 'Giới thiệu', 'About', '0000-00-00 00:00:00', '2016-04-24 16:00:46', 'gioi-thieu', '1');
+INSERT INTO `menu` VALUES ('3', 'Dịch vụ', 'Services', '0000-00-00 00:00:00', '2016-04-24 16:01:07', 'dich-vu', '1');
 INSERT INTO `menu` VALUES ('4', 'Sản Phẩm', 'Products', '0000-00-00 00:00:00', '2016-03-12 03:05:01', 'san-pham', '1');
 INSERT INTO `menu` VALUES ('5', 'Khuyến mãi', 'Sale Off', '0000-00-00 00:00:00', '2016-03-12 03:05:09', 'khuyen-mai', '0');
 INSERT INTO `menu` VALUES ('6', 'Liên Hệ', 'Contact', '0000-00-00 00:00:00', '2016-03-12 03:05:18', 'lien-he', '1');
+
+-- ----------------------------
+-- Table structure for prices
+-- ----------------------------
+DROP TABLE IF EXISTS `prices`;
+CREATE TABLE `prices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `min` float(255,0) DEFAULT NULL,
+  `max` float(255,0) DEFAULT NULL,
+  `unit` varchar(255) DEFAULT NULL,
+  `desc` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of prices
+-- ----------------------------
+INSERT INTO `prices` VALUES ('3', '500000', '700000', 'm211', null, '2016-04-24 22:59:43', '2016-04-24 15:59:43');
+INSERT INTO `prices` VALUES ('4', '700000', '900000', 'm2', null, null, null);
+INSERT INTO `prices` VALUES ('5', '900000', '1100000', 'm2', null, null, null);
+INSERT INTO `prices` VALUES ('6', '1100000', '1300000', 'm2', null, null, null);
+INSERT INTO `prices` VALUES ('10', '1300000', '1500000', 'm2', null, '2016-04-24 16:22:48', '2016-04-24 16:22:48');
 
 -- ----------------------------
 -- Table structure for product
@@ -265,7 +313,7 @@ CREATE TABLE `product` (
   `id_con3` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `name_en` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `gia` varchar(255) NOT NULL,
+  `gia` float NOT NULL,
   `image` varchar(255) NOT NULL,
   `mota` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mota_en` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -273,29 +321,30 @@ CREATE TABLE `product` (
   `thongso_en` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `color` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('2', '0', '1', '0', '0', 'san pham A1.2', 'san pham A1.2 EN EN END NENENENNEENENN NENEN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:30:46', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('3', '0', '0', '1', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '1335666', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-03-28 21:00:04', '2016-03-14 06:56:36');
-INSERT INTO `product` VALUES ('4', '0', '0', '1', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '1335666', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-03-28 20:59:51', '2016-03-14 06:56:36');
-INSERT INTO `product` VALUES ('5', '0', '0', '0', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '1335666', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-03-27 14:43:03', '2016-03-14 06:56:36');
-INSERT INTO `product` VALUES ('6', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:43:05', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('7', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:43:06', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('8', '0', '2', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 20:58:52', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('9', '1', '0', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 21:34:46', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('10', '1', '0', '0', '0', 'van go tu nhien', 'van go tu nhien en', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 21:34:47', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('11', '2', '0', '0', '0', 'van go nhat ban', 'van go nhat ban en', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 21:34:56', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('12', '3', '0', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 21:35:08', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('13', '0', '2', '0', '0', 'san pham A1.2 V', 'san pham A1.2 E TEST', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 20:58:54', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('14', '0', '1', '0', '0', 'san pham A1.2 V', 'san pham A1.2 E TEST', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 18:12:26', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('15', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:43:06', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('16', '0', '0', '1', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-28 20:59:43', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('17', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:43:06', '2016-03-14 06:00:12');
-INSERT INTO `product` VALUES ('18', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-03-27 14:43:06', '2016-03-14 06:00:12');
+INSERT INTO `product` VALUES ('2', '0', '1', '0', '0', 'san pham A1.2', 'san pham A1.2 EN EN END NENENENNEENENN NENEN', '500000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:03', '2016-03-14 06:00:12', '2');
+INSERT INTO `product` VALUES ('3', '0', '0', '1', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '500000', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-04-24 23:54:03', '2016-03-14 06:56:36', '2');
+INSERT INTO `product` VALUES ('4', '0', '0', '1', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '700000', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-04-24 23:54:05', '2016-03-14 06:56:36', '4');
+INSERT INTO `product` VALUES ('5', '0', '0', '0', '1', 'sab pham Btt VN VN', 'sab pham Btt EN  EN', '700000', 'upload/image/qj2PDRWzGK0i004.png.jpg', 'sab pham B tt', 'sab pham Btt', 'sab pham B', 'sab pham Bttt', '2016-04-24 23:54:06', '2016-04-24 16:53:32', '5');
+INSERT INTO `product` VALUES ('6', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '900000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:07', '2016-04-24 16:52:03', '5');
+INSERT INTO `product` VALUES ('7', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '900000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:27', '2016-03-14 06:00:12', '4');
+INSERT INTO `product` VALUES ('8', '0', '2', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '1100000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:30', '2016-03-14 06:00:12', '4');
+INSERT INTO `product` VALUES ('9', '1', '0', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '1300000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:34', '2016-03-14 06:00:12', '5');
+INSERT INTO `product` VALUES ('10', '1', '0', '0', '0', 'van go tu nhien', 'van go tu nhien en', '1600000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:08', '2016-04-24 16:52:03', '6');
+INSERT INTO `product` VALUES ('11', '2', '0', '0', '0', 'van go nhat ban', 'van go nhat ban en', '1100000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:41', '2016-03-14 06:00:12', '6');
+INSERT INTO `product` VALUES ('12', '3', '0', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '1300000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:45', '2016-03-14 06:00:12', '2');
+INSERT INTO `product` VALUES ('13', '0', '2', '0', '0', 'san pham A1.2 V', 'san pham A1.2 E TEST', '1600000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:26:51', '2016-03-14 06:00:12', '2');
+INSERT INTO `product` VALUES ('14', '0', '1', '0', '0', 'san pham A1.2 V', 'san pham A1.2 E TEST', '1800000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:10', '2016-04-24 16:52:03', '7');
+INSERT INTO `product` VALUES ('15', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '20000000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 14:27:04', '2016-03-14 06:00:12', '4');
+INSERT INTO `product` VALUES ('16', '0', '0', '1', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:12', '2016-04-24 16:52:03', '8');
+INSERT INTO `product` VALUES ('17', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:12', '2016-04-24 16:52:03', '8');
+INSERT INTO `product` VALUES ('18', '0', '1', '0', '0', 'san pham A1.2 VN VN', 'san pham A1.2 EN  EN', '123000', 'upload/image/6D1C8YQHh7L1001.png.jpg', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', 'san pham A1.2', '2016-04-24 23:54:14', '2016-04-24 16:52:03', '7');
 
 -- ----------------------------
 -- Table structure for profile

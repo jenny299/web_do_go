@@ -66,6 +66,30 @@ App::before(function($request)
     $banner = flash::all();
     View::share('banners_web',$banner); 
 
+    App::singleton('minPrices', function(){
+        $minPrices = prices::select('id','min','max','unit')->orderBy('min','asc')->first();
+        return $minPrices;
+    });
+
+    App::singleton('maxPrices', function(){
+        $maxPrices = prices::select('id','min','max','unit')->orderBy('max','desc')->first();
+        return $maxPrices;
+    });
+
+
+    $colorList = colorProduct::all();
+    $pricesList = prices::all();
+    /*$maxPrices = prices::select('id','min','max','unit')->orderBy('max','desc')->first();
+    $minPrices = prices::select('id','min','max','unit')->orderBy('min','asc')->first();*/
+
+    View::share('minPrices', app('minPrices'));
+    View::share('maxPrices', app('maxPrices'));
+
+
+    View::share('colorList',$colorList);
+    View::share('pricesList',$pricesList);
+    /*View::share('maxPrices',$maxPrices);
+    View::share('minPrices',$minPrices);*/
 });
 
 

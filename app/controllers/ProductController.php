@@ -291,7 +291,8 @@ class ProductController extends BaseController {
 	}
 	public function edit_product($id0,$id1,$id2){
 		$product = product::find($id2);
-		return View::make('admin.product.sanpham.edit')->with('id',$product)->with('id0',$id0)->with('id1',$id1);
+		$color = colorProduct::orderBy('name')->get();
+		return View::make('admin.product.sanpham.edit')->with('id',$product)->with('id0',$id0)->with('id1',$id1)->with("colorList", $color);
 	}
 	public function post_edit_product(){
 		$input = Input::all();
@@ -301,6 +302,7 @@ class ProductController extends BaseController {
 		$admin = product::find($id);
 		$admin->name = $input['name'];
 		$admin->name_en = $input['name_en'];
+		$admin->color = $input['color_product'];
 		$admin->gia = $input['gia'];
 		$admin->mota = stripcslashes($input['content1']);
 		$admin->mota_en = stripcslashes($input['content2']);

@@ -55,8 +55,9 @@ Route::get('khuyen-mai',array('as' => 'khuyen-mai' , 'uses' =>'HomeController@sa
 Route::get('san-pham',array('as' => 'san-pham' , 'uses' =>'HomeController@products'));
 Route::get('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@contact'));
 Route::post('lien-he',array('as' => 'lien-he' , 'uses' =>'HomeController@sendcontact'));
-// Route::get('loai-sp/{name_child}/{level}/{idchild}',array('as' => 'loai-sp/{name_child}/{level}/{idchild}' , 'uses' =>'HomeController@categoryproduct'));
-// Route::get('tim-kiem',array('as' => 'tim-kiem' , 'uses' =>'HomeController@searchproduct'));
+// Route::any('tim-kiem-nang-cao',array('as' => 'tim-kiem-nang-cao' , 'uses' =>'HomeController@viewadvancesearch'));
+Route::get('advance-search',array('as' => 'advance-search' , 'uses' =>'HomeController@advancesearch'));
+Route::get('view-advance-search',array('as' => 'view-advance-search' , 'uses' =>'HomeController@viewadvancesearch'));
 
 //admincontroller
 Route::group(array('prefix' =>'admin','before' =>'authAdmin'),function()
@@ -98,6 +99,25 @@ Route::group(array('prefix' =>'admin','before' =>'authAdmin'),function()
 
 		/****************************************************************************/
 
+		//color
+		Route::get('color',array( 'as'=>'color', 'uses'=>'ColorController@color'));
+		Route::get('color/edit/{id}',array( 'as'=>'edit_color', 'uses'=>'ColorController@edit_color'));
+		Route::post('post_edit_color',array( 'as'=>'post_edit_color', 'uses'=>'ColorController@post_edit_color'));
+		Route::get('color/create',array( 'as'=>'color.create', 'uses'=>'colorController@create'));
+		Route::post('post_new_color',array( 'as'=>'post_new_color', 'uses'=>'colorController@post_new_color'));
+		Route::get('delete_color/{id}',array( 'as'=>'delete_color', 'uses'=>'colorController@delete_color'));
+
+		/****************************************************************************/
+
+		//prices
+		Route::get('prices',array( 'as'=>'prices', 'uses'=>'PricesController@prices'));
+		Route::get('prices/create',array( 'as'=>'prices.create', 'uses'=>'PricesController@create'));
+		Route::get('prices/edit/{id}',array( 'as'=>'edit_prices', 'uses'=>'PricesController@edit_prices'));
+		Route::post('post_edit_prices',array( 'as'=>'post_edit_prices', 'uses'=>'PricesController@post_edit_prices'));
+		Route::post('post_new_prices',array( 'as'=>'post_new_prices', 'uses'=>'PricesController@post_new_prices'));
+		Route::get('delete_prices/{id}',array( 'as'=>'delete_prices', 'uses'=>'PricesController@delete_prices'));
+
+		/****************************************************************************/
 		//Service
 		Route::get('service',array( 'as'=>'about', 'uses'=>'ServiceController@service'));
 		Route::get('service/edit/{id}',array( 'as'=>'edit_service', 'uses'=>'ServiceController@edit_service'));

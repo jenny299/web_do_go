@@ -96,6 +96,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="color"  title="Color of Product">
+                            <i class="fa fa-lg fa-fw fa-eye"></i> 
+                            <span class="menu-item-parent">Màu sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="prices"  title="Prices of Product">
+                            <i class="fa fa-lg fa-fw fa-usd"></i> 
+                            <span class="menu-item-parent">Giá sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#"  title="Setting">
                             <i class="fa fa-lg fa-fw fa-cog"></i> 
                             <span class="menu-item-parent">Setting</span>

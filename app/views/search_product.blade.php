@@ -7,7 +7,7 @@
 @include('left_menu')
 <div class="content-home col-md-6">  
 
-    @if($isSearch == "1" || $productList->getTotal() <= 0)
+    @if($productList->getTotal() <= 0)
         <div class="row" style="margin-top:48px; margin-left: 0px">
         <h3 class="mb20">{{$msgProduct}}</h3>
     </div>
@@ -48,12 +48,7 @@
     @endif
         
     </div>
-    {{$productList->appends(Request::all())->links();}}
-    <!-- @if($isSearch == "1")
-        {{$productList->appends(Request::get('search'))->links();}}
-    @else
-        {{$productList->appends(Request::get('name'), Request::get('level'), Request::get('id'))->links();}}
-    @endif -->
+    {{$productList->appends(Request::get('prices'), Request::get('colorProduct'))->links();}}
 </div>
 @include('right_menu')
 @endsection

@@ -243,19 +243,20 @@ class HomeController extends BaseController {
                 $productList = product::distinct('id')->where('name','LIKE','%'.$content.'%')->orWhere('mota','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
 
                 if($productList->getTotal() > 0)
-                    $msg = $productList->getTotal()." products were found.";
+                    $msg = $productList->getTotal()." sản phẩm được tìm thấy.";
                 else
-                    $msg = "No products was found.";
+                    $msg = "Khôg có sản phẩm nào được tìm thấy.";
+
+                
             }
             else{
                 $title = "Products";
                 $productList = product::distinct('id')->where('name_en','LIKE','%'.$content.'%')->orWhere('mota_en','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
 
                 if($productList->getTotal() > 0)
-                    $msg = $productList->getTotal()." sản phẩm được tìm thấy.";
+                    $msg = $productList->getTotal()." products were found.";
                 else
-                    $msg = "Khôg có sản phẩm nào được tìm thấy.";
-                
+                    $msg = "No products was found.";
             }
             $isSearch = 1;
         }
@@ -334,7 +335,7 @@ class HomeController extends BaseController {
     
     }
 
-    public function categoryproduct($name_child, $level, $idchild){
+    /*public function categoryproduct($name_child, $level, $idchild){
         if(Input::get('name_child') != "")
             $name_child = Input::get('name_child');
         if(Input::get('level') != "")
@@ -372,38 +373,144 @@ class HomeController extends BaseController {
             else
                 $msg = "No products was found.";
         }
-/*
-        $data = array(
-            'title' => $title,
-            'productList' => $productList,
-            'menuActive' => '#san-pham',
-            'isSearch' => "2",
-            'msgProduct' => $msg,
-        );
-        return View::make('product', $data);*/
-    }
+    }*/
 
-    /*public function searchproduct(){
-        // echo 1;
-        $content = Input::get("search");
+    public function viewadvancesearch(){
+        $isSearch = 0;
+        $total = 0;
+        $msg = "";
+        $pricesID = "";
+        $colorID = "";
+        $contentSearch = "";
+
         $lang = $this->checkLanguage(); 
 
         if($lang=="vn"){
             $title = "Sản phẩm";
-            $result = product::distinct('id')->where('name','LIKE','%'.$content.'%')->orWhere('mota','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);
         }
         else{
             $title = "Products";
-            $result = product::distinct('id')->where('name_en','LIKE','%'.$content.'%')->orWhere('mota_en','LIKE','%'.$content.'%')->groupBy('id')->paginate(9)->appends(['search' => $content]);        
         }
+        $product = product::take(9)->orderBy('updated_at','desc')->get();
+        
+            // dd(DB::getQueryLog());
 
         $data = array(
             'title' => $title,
-            'productList' => $result,
+            // 'productList' => $result,
             'menuActive' => '#san-pham',
+            'productList' => $product,
+            'msgProduct' => $msg,
+            'total' => $total,
+            'isSearch' => $isSearch,
+            'oldPriceID' => $pricesID,
+            'oldColorID' => $colorID,
+            'oldContentSearch' => $contentSearch,
         );
-        return View::make('product', $data);
+        return View::make('advance_search', $data);
 
-    }*/
+    }
+
+    public function advancesearch(){
+        $prices = Input::get("prices");
+        $colorProduct = Input::get("colorProduct");
+        $contentSearch = Input::get("contentSearch");
+
+        $colorID = "";
+        $pricesID = "";
+        $min = "";
+        $max = "";
+        $msg = "";
+        $isSearch = 1;
+        $total = 0;
+        $lang = $this->checkLanguage(); 
+
+        if($prices !="" || $colorProduct != "" || $contentSearch != ""){
+            $sql = product::distinct('id');
+
+            if($contentSearch != ""){
+                if($lang == "vn")
+                    $sql = $sql->where('name','LIKE','%'.$contentSearch.'%');
+                else
+                    $sql = $sql->where('name_en','LIKE','%'.$contentSearch.'%');
+            }
+
+            if($prices != ""){
+                if($prices == "false"){ //min
+                    $minPrices = app('minPrices');
+                    $min = 0;
+                    $max = (float) $minPrices->min;
+                    $sql = $sql->whereBetween('gia', [$min,$max]);
+                }
+                else if($prices == "true"){ //max
+                    $maxPrices = app('maxPrices');
+                    $min = (float) $maxPrices->max;
+                    $sql = $sql->where('gia', '>=', $max);
+                }
+                else{
+                    //Get min, max of prices
+                    $pricesValue = explode("_", $prices, 3);
+                    $pricesID = $pricesValue[0];
+                    $min = (float) $pricesValue[1];
+                    $max = (float) $pricesValue[2];
+                    $sql = $sql->whereBetween('gia', [$min,$max]);
+                }    
+                
+            }
+
+            if($colorProduct != ""){
+                //Get id of color
+                $arr = explode("_", $colorProduct, 2);
+                $colorID = (int) $arr[0];
+                $sql = $sql->where('color','=',$colorID);    
+            }            
+
+            $product = $sql->paginate(9)->appends(['contentSearch' => $contentSearch, 'prices' => $prices, 'colorProduct' => $colorProduct]);
+            // $product = $sql->paginate(1)->appends(['prices' => $prices, 'colorProduct' => $colorProduct]);
+
+            if($lang=="vn"){
+                $title = "Sản phẩm";    
+                if($product->getTotal() > 0)
+                    $msg = $product->getTotal()." sản phẩm được tìm thấy.";
+                else
+                    $msg = "Khôg có sản phẩm nào được tìm thấy.";
+            }
+            else{
+                $title = "Products";
+                if($product->getTotal() > 0)
+                    $msg = $product->getTotal()." products were found.";
+                else
+                    $msg = "No products was found.";
+            }
+        }
+        else{
+            if($lang=="vn"){
+                $title = "Sản phẩm";
+            }
+            else{
+                $title = "Products";
+            }
+            $product = product::paginate(9);
+        }
+
+        $total = $product->getTotal();
+
+            // dd(DB::getQueryLog());
+
+        $data = array(
+            'title' => $title,
+            // 'productList' => $result,
+            'menuActive' => '#san-pham',
+            'productList' => $product,
+            'msgProduct' => $msg,
+            'total' => $total,
+            'isSearch' => $isSearch,
+            'oldPriceID' => $pricesID,
+            'oldColorID' => $colorID,
+            'oldContentSearch' => $contentSearch,
+        );
+        return View::make('advance_search', $data);
+
+    }
 
 }

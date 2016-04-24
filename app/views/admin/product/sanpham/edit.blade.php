@@ -81,6 +81,25 @@
                                         </label>
                                         <p><br></p>
 
+                                        <label class="label" for"code">Màu sản phẩm</label>
+                                        <!-- <label class="input" for="">
+                                           <input class="form-control" name="color_product" required value="{{$id->color}}">
+                                        </label>   -->
+                                        <label class="select">
+                                            <select name="color_product">
+                                                <?php  
+                                                    foreach($colorList as $c){
+                                                        if($c->id == $id->color)
+                                                            echo "<option selected='selected' value='$c->id'>".$c->name."</option>";
+                                                        else
+                                                            echo "<option value='$c->id'>".$c->name."</option>";
+                                                    }
+                                                ?>
+                                            </select> 
+                                            <i></i> 
+                                        </label>
+                                        <p><br></p>   
+
                                         <label class="label" for"code">Giá</label>
                                         <label class="input" for="">
                                            <input class="form-control" name="gia" required value="{{$id->gia}}">

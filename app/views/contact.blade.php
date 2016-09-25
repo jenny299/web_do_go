@@ -9,6 +9,7 @@
   <div class="col-md-6">
       <div id="map-canvas" style="width:100%; height:300px;"></div>
   </div> 
+  
   <div class="col-md-3">
       <form name="contactForm" id="contact-form" class="contact-form" method="post">
           <input type="text" id="action_url" style="display:none;" value="{{Asset('/lien-he')}}">

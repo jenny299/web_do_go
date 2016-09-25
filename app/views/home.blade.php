@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="fotorama" data-nav="thumbs" data-allowfullscreen="1" data-thumbheight="100" data-thumbwidth="100">
-                            <img src="img/800x600.png" alt="Image Alternative text" title="waipio valley" />
+                            <img src="img/800x600.png" alt="Image Alternative text" title="power of the life" />
                             <img src="img/800x600.png" alt="Image Alternative text" title="The Hidden Power of the Heart" />
                             <img src="img/800x600.png" alt="Image Alternative text" title="cascada" />
                             <img src="img/800x600.png" alt="Image Alternative text" title="the best mode of transport here in maldives" />
